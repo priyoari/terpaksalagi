@@ -8,12 +8,11 @@ public class kenalan {
     private int Panjang;
     private int Lebar;
     private int Luas;
-    private String Bentuk;
     private int Jkursi;
     private int Rasio;
     private int Jpintu;
     private int Jjendela;
-    private String Analisisruang;
+    private String AnaPintuJendela;
     
 // jumlah,kondisi dan posisi
     private int Kontak;
@@ -118,14 +117,6 @@ public class kenalan {
         this.Luas = Luas;
     }
 
-    public String getBentuk() {
-        return Bentuk;
-    }
-
-    public void setBentuk(String Bentuk) {
-        this.Bentuk = Bentuk;
-    }
-
     public int getJkursi() {
         return Jkursi;
     }
@@ -158,12 +149,12 @@ public class kenalan {
         this.Jjendela = Jjendela;
     }
 
-    public String getAnalisisruang() {
-        return Analisisruang;
+    public String getAnaPintuJendela() {
+        return AnaPintuJendela;
     }
 
-    public void setAnalisisruang(String Analisisruang) {
-        this.Analisisruang = Analisisruang;
+    public void setAnaPintuJendela(String AnaPintuJendela) {
+        this.AnaPintuJendela = AnaPintuJendela;
     }
 
     public int getIntKontak() {
