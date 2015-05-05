@@ -42,31 +42,31 @@ public class kontrol {
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihlantai(scan.next());
+    kenal.setBersihlantai(scan.next().toUpperCase());
             
     System.out.println("Kondisi Dinding : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihdinding(scan.next());
+    kenal.setBersihdinding(scan.next().toUpperCase());
             
     System.out.println("Kondisi Atap    : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihatap(scan.next());
+    kenal.setBersihatap(scan.next().toUpperCase());
             
     System.out.println("Kondisi Pintu   : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihpintu(scan.next());
+    kenal.setBersihpintu(scan.next().toUpperCase());
             
     System.out.println("Kondisi Jendela : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihjendela(scan.next());
+    kenal.setBersihjendela(scan.next().toUpperCase());
         
     // kebersihan
     System.out.print("masukkan jumlah sirkulasi:");

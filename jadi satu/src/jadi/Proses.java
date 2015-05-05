@@ -114,46 +114,47 @@ public class Proses {
    
     
     
-    String kebersihan(){
-        //lantai
-        if(kenal.getBersihlantai()==1){
+    boolean kebersihan(){
+        //lantair
+        if(kenal.getBersihlantai().equals("BERSIH")){
             System.out.println("Kondisi lantai bersih, Sesuai");
-            return "sesuai"; 
+            return true; 
         }   
         else{
             System.out.println("Kondisi lantai kotor, Tidak sesuai");
-            return "tidak";
+            //return false;
         }
         
         //atap
-        if(kenal.getBersihatap()==1){
+        if(kenal.getBersihatap().equals("BERSIH")){
             System.out.println("Kondisi atap bersih, Sesuai");
-           return "sesuai";
+           return true;
         }
         else{
             System.out.println("Kondisi atap kotor, Tidak sesuai");
-            return "tidak";
+            //return false;
         }
         
         //pintu
-         if(kenal.getBersihpintu()==1){
+         if(kenal.getBersihpintu().equals("BERSIH")){
             System.out.println("Kondisi pintu bersih, Sesuai");
-            return "sesuai";
+            return true;
          }
          else{
             System.out.println("Kondisi pintu kotor, Tidak sesuai");
-            return "tidak";
+            //return false;
          }
          
            //jendela
-         if(kenal.getBersihjendela()==1){
+         if(kenal.getBersihjendela().equals("BERSIH")){
             System.out.println("Kondisi jendela bersih, Sesuai");
-            return "sesuai";
+            return true;
          }
          else{
             System.out.println("Kondisi jendela kotor, Tidak sesuai"); 
-            return "tidak";
          }
+         
+         return false;
     }    
     
     
@@ -168,7 +169,7 @@ public class Proses {
             return "sesuai";
         }else{
             System.out.println("sirkulasi buruk");
-            return "tidak";
+            //return "tidak";
         }
         
         //yang di bawah cahaya
@@ -177,7 +178,7 @@ public class Proses {
             return "sesuai";
         }else if(kenal.getPencahayaan()<=350){
             System.out.println("cahaya sesuai");
-            //return true;
+            return "sesuai";
         }else{
             System.out.println("cahaya oke");
             //return true;
@@ -186,8 +187,10 @@ public class Proses {
         //yang ini kelembapan
         if(kenal.getLembab()>=70){
             System.out.println("kelembapan parah");
+            return "sesuai";
         }else if(kenal.getLembab()==75){
             System.out.println("kelembapan rata-rata");
+            return "sesuai";
         }else{
             System.out.println("ruangan sesuai");
         }
@@ -195,30 +198,41 @@ public class Proses {
         //suhu
         if(kenal.getSuhu()<=25){
             System.out.println("sangat lembab");
+            return "sesuai";
         }else if(kenal.getSuhu()<=35){
             System.out.println("suhu sesuai");
+            return "sesuai";
         }else{
             System.out.println("suhu terlalu panas");
         }
         
         
         //bising
-        if(kenal.getTkebisingan()==1)
+        if(kenal.getTkebisingan()==1){
             System.out.println("Tidak sesuai");
-        else
+            return "sesuai";
+        }
+        else{
             System.out.println("Sesuai");
-    
+        }
         //bau
-        if(kenal.getTbau()==1)
+        if(kenal.getTbau()==1){
             System.out.println("Tidak sesuai");
-        else
+            return "sesuai";
+        }
+       else{
             System.out.println("Sesuai");
-        
+         }
         //bocor
-        if(kenal.getTkebocoran()==1)
+        if(kenal.getTkebocoran()==1){
             System.out.println("Tidak sesuai");
-        else
+            return "sesuai";
+        }
+        else{
             System.out.println("Sesuai");
+        }
+        
+        return "tidak sesuai";
     }
  
     
@@ -244,42 +258,44 @@ public class Proses {
     
     //ini batas lingkungan_nyaman()
     
-    boolean rusak(){
-        if(kenal.getTkerusakan()==1)
+    String cekaman(){
+        //cek rusak
+        if(kenal.getTkerusakan()==1){
             System.out.println("Tidak sesuai");
+            return "ridak sesuai";
+        }
         else
             System.out.println("Sesuai");
-    }
-    
-    boolean aus(){
-        if(kenal.getTkeausan()==1)
-            System.out.println("Tidak sesuai");
-        else
-            System.out.println("Sesuai");
-    }
         
-    // keamanan
-    boolean kondisi(){
-        if(kenal.getKondisi().equals("oke"))
+        
+        //aus
+        if(kenal.getTkeausan()==1){
+            System.out.println("Tidak sesuai");
+            return "tidak sesuai";
+        }
+        else{
+            System.out.println("Sesuai");
+        }
+        //kondisi
+        if(kenal.getAmankunci().equals("oke")){
             System.out.println("bangunan oke sip");
-        else
+            return "sesuai";
+        }
+        else{
             System.out.println("bangunan perlu renofasi");
-    }
-    
-    boolean jendela(){
+        }
+        //jendela
         System.out.print("apakah jendela aman:");
         kenal.setAmanjendela(scan.next());
         if(kenal.getAmankunci().equals("ada")&&kenal.getAmanjendela().equals("aman")){
             System.out.println("keamanan oke sip");
-            return true;
+            return "sesuai";
         }
         else{
             System.out.println("rawan pencurian");
-            return false;
+            //return false;
         }
-    }    
-    
-    String keamanan(){
+        //aman
         System.out.println("Deteksi bahaya");
         if(kenal.getAmankondisi().equals("oke")&&kenal.getAmankunci().equals("ada")){
             System.out.println("bahaya teratasi");
@@ -287,10 +303,23 @@ public class Proses {
         }
         else{
             System.out.println("banyak bahaya di ruangan itu");
-            return "tidak sesuai";
+            //return "tidak sesuai";
         }
+        
+        return "tidak sesuai";
+        
     }
     
-                
+   
+    
+
+        
+    // keamanan
+    
+    
+        
+    
+    
+               
 }    
 
