@@ -1,47 +1,58 @@
 public class Proses {
-    kenalan kenal = new kelanan()
+    kenalan kenal = new kenalan();
+    
     // kondisi ruang
     boolean luasruang(){
-    kenal.setLuas(kenal.getPanjang()*kenal.getLebar());
-    System.out.println("Luas ruang = "+kenal.getLuas());
-    
+        kenal.setLuas(kenal.getPanjang()*kenal.getLebar());
+        System.out.println("Luas ruang = "+kenal.getLuas());
     } 
     
-    
-    if(kenal.getPanjang()==kenal.getLebar()){
-        System.out.print("Persegi, Tidak sesuai");
-    }else{
-        System.out.println("Persegi panjang, Sesuai");
+    boolean bentukruang(){
+        if(kenal.getPanjang()==kenal.getLebar()){
+            System.out.print("Persegi, Tidak sesuai");
+        }else{
+            System.out.println("Persegi panjang, Sesuai");
+        }
     }
     
-    kenal.setRasio(kenal.getLuas()/kenal.getJkursi());
-    if(kenal.getRasio()>=1){
-        System.out.println("Rasio = "+kenal.getRasio() +"Sesuai");
-    }else{
-        System.out.println("Rasio = "+kenal.getRasio() +"Tidak Sesuai");
+    boolean rasioluas(){
+        kenal.setRasio(kenal.getLuas()/kenal.getJkursi());
+        if(kenal.getRasio()>=1){
+            System.out.println("Rasio = "+kenal.getRasio() +"Sesuai");
+        }else{
+            System.out.println("Rasio = "+kenal.getRasio() +"Tidak Sesuai");
+        }
     }
     
-    if(kenal.getJpintu()>=2){
-        System.out.println("Jumlah pintu sesuai");
-    }else{
-        System.out.println("Jumlah pintu tidak sesuai");
-    }
-    if(kenal.getJjendela()>=1){
-        System.out.println("Jumlah jendela sesuai");
-    }else{
-        System.out.println("Jumlah jendela tidak sesuai");
+    boolean pintujendela(){
+        if(kenal.getJpintu()>=2){
+            System.out.println("Jumlah pintu sesuai");
+        }else{
+            System.out.println("Jumlah pintu tidak sesuai");
+        }
+        if(kenal.getJjendela()>=1){
+            System.out.println("Jumlah jendela sesuai");
+        }else{
+            System.out.println("Jumlah jendela tidak sesuai");
+        }
     }
     
-    // jumlah,kondisi dan posisi
-    if(kenal.getKontak()>=4&&kenal.getKondisiKontak().equals("ya")&&kenal.getPosisiKontak().equals("ya"))
-        System.out.println("Sesuai");  
-    if(kenal.getKontak()<=4||kenal.getKondisiKontak().equals("tidak")||kenal.getPosisiKontak().equals("tidak"))
-        System.out.println("tidak Sesuai");
         
-    if(kenal.getKabelLCD()>=1&&kenal.getKondisiKabelLCD().equals("ya")&&kenal.getPosisiKabelLCD().equals("ya"))
-        System.out.println("Sesuai");
-    if(kenal.getKabelLCD()<=1||kenal.getKondisiKabelLCD().equals("tidak")||kenal.getPosisiKabelLCD().equals("tidak"))
-        System.out.println("tidak Sesuai");
+    // jumlah,kondisi dan posisi
+    boolean kelistrikan(){
+        if(kenal.getKontak()>=4&&kenal.getKondisiKontak().equals("ya")&&kenal.getPosisiKontak().equals("ya"))
+            System.out.println("Sesuai");  
+        if(kenal.getKontak()<=4||kenal.getKondisiKontak().equals("tidak")||kenal.getPosisiKontak().equals("tidak"))
+            System.out.println("tidak Sesuai");
+    }
+    
+    boolean lcd(){
+        if(kenal.getKabelLCD()>=1&&kenal.getKondisiKabelLCD().equals("ya")&&kenal.getPosisiKabelLCD().equals("ya"))
+            System.out.println("Sesuai");
+        if(kenal.getKabelLCD()<=1||kenal.getKondisiKabelLCD().equals("tidak")||kenal.getPosisiKabelLCD().equals("tidak"))
+            System.out.println("tidak Sesuai");
+    }    
+    
         
     if(kenal.getLampu()>=18&&kenal.getKondisiLampu().equals("ya")&&kenal.getPosisiLampu().equals("ya"))
         System.out.println("Sesuai");
