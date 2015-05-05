@@ -88,35 +88,35 @@ public class Proses {
     }
         
     // lingkungan
-    boolean lantai(){
+    boolean klantai(){
         if(kenal.getKlantai()==1)
             System.out.println("Kondisi lantai bersih, Sesuai");
         else
             System.out.println("Kondisi lantai kotor, Tidak sesuai");
     }
     
-    boolean dinding(){
+    boolean kdinding(){
         if(kenal.getKdinding()==1)
             System.out.println("Kondisi dinding bersih, Sesuai");
         else
             System.out.println("Kondisi dinding kotor, Tidak sesuai");
     }
     
-    boolean atap(){
+    boolean katap(){
         if(kenal.getKatap()==1)
             System.out.println("Kondisi atap bersih, Sesuai");
         else
             System.out.println("Kondisi atap kotor, Tidak sesuai");
     }
     
-    boolean pintu(){
+    boolean kpintu(){
         if(kenal.getKpintu()==1)
             System.out.println("Kondisi pintu bersih, Sesuai");
         else
             System.out.println("Kondisi pintu kotor, Tidak sesuai");
     }
     
-    boolean jendela(){
+    boolean kjendela(){
         if(kenal.getKjendela()==1)
             System.out.println("Kondisi jendela bersih, Sesuai");
         else
@@ -201,24 +201,30 @@ public class Proses {
     }
         
     // keamanan
+    boolean kondisi(){
+        if(kenal.getKondisi().equals("oke"))
+            System.out.println("bangunan oke sip");
+        else
+            System.out.println("bangunan perlu renofasi");
+    }
     
-    if(kenal.getKondisi().equals("oke"))
-        System.out.println("bangunan oke sip");
-    else
-        System.out.println("bangunan perlu renofasi");
-    
-    System.out.print("apakah jendela aman:");
-    kenal.setJendela(scan.next());
-    if(kenal.getKunci().equals("ada")&&kenal.getJendela().equals("aman"))
-        System.out.println("keamanan oke sip");
-    else
-        System.out.println("rawan pencurian");
-    
-    System.out.println("Deteksi bahaya");
-    if(kenal.getKondisi().equals("oke")&&kenal.getKunci().equals("ada"))
-        System.out.println("bahaya teratasi");
-    else
-        System.out.println("banyak bahaya di ruangan itu");
-                
+    boolean jendela(){
+        System.out.print("apakah jendela aman:");
+        kenal.setJendela(scan.next());
+        if(kenal.getKunci().equals("ada")&&kenal.getJendela().equals("aman"))
+            System.out.println("keamanan oke sip");
+        else
+            System.out.println("rawan pencurian");
     }    
-}
+    
+    boolean keamanan(){
+        System.out.println("Deteksi bahaya");
+        if(kenal.getKondisi().equals("oke")&&kenal.getKunci().equals("ada"))
+            System.out.println("bahaya teratasi");
+        else
+            System.out.println("banyak bahaya di ruangan itu");
+    }
+    
+                
+}    
+
