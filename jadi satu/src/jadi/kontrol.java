@@ -33,7 +33,7 @@ public class kontrol {
     System.out.println("Jumlah stop kontak: ");
     kenal.setKontak(scan.nextInt());
     System.out.print("Kondisi stop kontak baik (ya/tidak): ");
-    kenal.setKondisi(scan.next());
+    kenal.setKondisiKontak(scan.next());
     System.out.print("Posisi stop kontak dekat dosen & dipojok (ya/tidak): ");
     kenal.setPosisiKontak(scan.next());
     
@@ -114,12 +114,12 @@ public class kontrol {
     
     // keamanan
     System.out.print("cek kondisi bangunan:");
-    kenal.setKondisi(scan.next());
+    kenal.setAmankokoh(scan.next());
         
     System.out.print("apakah kunci ada:");
-    kenal.setKunci(scan.next());
+    kenal.setAmankunci(scan.next());
     System.out.print("apakah jendala aman:");
-    kenal.setJendela(scan.next());
+    kenal.setAmanjendela(scan.next());
         
     }
         

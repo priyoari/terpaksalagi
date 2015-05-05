@@ -42,7 +42,7 @@ public class Proses {
             System.out.println("Jumlah pintu tidak sesuai");
         }
        //ini yang jendela
-       if(kenal.getJendela()<1){
+       if(kenal.getJjendela()<1){
             System.out.println("Jumlah jendela sesuai");
         }else{
             System.out.println("Jumlah jendela tidak sesuai");
@@ -116,7 +116,7 @@ public class Proses {
     
     String kebersihan(){
         //lantai
-        if(kenal.getKlantai()==1){
+        if(kenal.getBersihlantai()==1){
             System.out.println("Kondisi lantai bersih, Sesuai");
             return "sesuai"; 
         }   
@@ -126,7 +126,7 @@ public class Proses {
         }
         
         //atap
-        if(kenal.getKatap()==1){
+        if(kenal.getBersihatap()==1){
             System.out.println("Kondisi atap bersih, Sesuai");
            return "sesuai";
         }
@@ -136,7 +136,7 @@ public class Proses {
         }
         
         //pintu
-         if(kenal.getKpintu()==1){
+         if(kenal.getBersihpintu()==1){
             System.out.println("Kondisi pintu bersih, Sesuai");
             return "sesuai";
          }
@@ -146,7 +146,7 @@ public class Proses {
          }
          
            //jendela
-         if(kenal.getKjendela()==1){
+         if(kenal.getBersihjendela()==1){
             System.out.println("Kondisi jendela bersih, Sesuai");
             return "sesuai";
          }
@@ -268,8 +268,8 @@ public class Proses {
     
     boolean jendela(){
         System.out.print("apakah jendela aman:");
-        kenal.setJendela(scan.next());
-        if(kenal.getKunci().equals("ada")&&kenal.getJendela().equals("aman")){
+        kenal.setAmanjendela(scan.next());
+        if(kenal.getAmankunci().equals("ada")&&kenal.getAmanjendela().equals("aman")){
             System.out.println("keamanan oke sip");
             return true;
         }
@@ -281,7 +281,7 @@ public class Proses {
     
     String keamanan(){
         System.out.println("Deteksi bahaya");
-        if(kenal.getKondisi().equals("oke")&&kenal.getKunci().equals("ada")){
+        if(kenal.getAmankondisi().equals("oke")&&kenal.getAmankunci().equals("ada")){
             System.out.println("bahaya teratasi");
             return "sesuai";
         }

@@ -66,10 +66,10 @@ public class kenalan {
     private int Tkeausan;
     
 // keamanan
-    private String kokoh;
-    private String kunci;
-    private String jendela;
-    private String kondisi;
+    private String amankokoh;
+    private String amankunci;
+    private String amanjendela;
+    private String amankondisi;
 
     public String getNamaRuang() {
         return namaRuang;
@@ -400,38 +400,7 @@ public class kenalan {
     public void setTkeausan(int Tkeausan) {
         this.Tkeausan = Tkeausan;
     }
-
-    public String getKokoh() {
-        return kokoh;
-    }
-
-    public void setKokoh(String kokoh) {
-        this.kokoh = kokoh;
-    }
-
-    public String getKunci() {
-        return kunci;
-    }
-
-    public void setKunci(String kunci) {
-        this.kunci = kunci;
-    }
-
-    public String getJendela() {
-        return jendela;
-    }
-
-    public void setJendela(String jendela) {
-        this.jendela = jendela;
-    }
-
-    public String getKondisi() {
-        return kondisi;
-    }
-
-    public void setKondisi(String kondisi) {
-        this.kondisi = kondisi;
-    }
+   
 
     public void setBersihlantai(String Bersihlantai) {
         this.Bersihlantai = Bersihlantai;
@@ -471,6 +440,38 @@ public class kenalan {
 
     public String getBersihjendela() {
         return Bersihjendela;
+    }
+
+    public String getAmankokoh() {
+        return amankokoh;
+    }
+
+    public void setAmankokoh(String amankokoh) {
+        this.amankokoh = amankokoh;
+    }
+
+    public String getAmankunci() {
+        return amankunci;
+    }
+
+    public void setAmankunci(String amankunci) {
+        this.amankunci = amankunci;
+    }
+
+    public String getAmanjendela() {
+        return amanjendela;
+    }
+
+    public void setAmanjendela(String amanjendela) {
+        this.amanjendela = amanjendela;
+    }
+
+    public String getAmankondisi() {
+        return amankondisi;
+    }
+
+    public void setAmankondisi(String amankondisi) {
+        this.amankondisi = amankondisi;
     }
 
 }
