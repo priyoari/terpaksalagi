@@ -1,3 +1,5 @@
+package jadi;
+
 import java.util.Scanner;
 public class Proses {
     kenalan kenal = new kenalan();

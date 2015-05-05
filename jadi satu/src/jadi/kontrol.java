@@ -1,3 +1,5 @@
+package jadi;
+
 
 import java.util.Scanner;
 

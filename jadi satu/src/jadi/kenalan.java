@@ -1,3 +1,5 @@
+package jadi;
+
 public class kenalan {
 // identitas ruang
     private String namaRuang;
