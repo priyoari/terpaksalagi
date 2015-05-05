@@ -1,11 +1,12 @@
 public class Proses {
-void proses(){
-    // identitas ruang
-   
-
+    kenalan kenal = new kelanan()
     // kondisi ruang
-     kenal.setLuas(kenal.getPanjang()*kenal.getLebar());
+    boolean luasruang(){
+    kenal.setLuas(kenal.getPanjang()*kenal.getLebar());
     System.out.println("Luas ruang = "+kenal.getLuas());
+    
+    } 
+    
     
     if(kenal.getPanjang()==kenal.getLebar()){
         System.out.print("Persegi, Tidak sesuai");
