@@ -14,7 +14,7 @@ public class kenalan {
     private int Rasio;
     private int Jpintu;
     private int Jjendela;
-    private String AnaPintuJendela;
+    private String Analisiskondisi;
     
 // jumlah,kondisi dan posisi
     private int Kontak;
@@ -45,12 +45,12 @@ public class kenalan {
     private String PosisiCCTV;
 
 // lingkungan
-    private int Klantai;
-    private int Kdinding;
-    private int Katap;
-    private int Kpintu;
-    private int Kjendela;
-    private String Analisis;
+    private String Bersihlantai;
+    private String Bersihdinding;
+    private String Bersihatap;
+    private String Bersihpintu;
+    private String Bersihjendela;
+    private String Analisisbersih;
     
 // kebersihan
     private int sirkulasi;
@@ -151,20 +151,20 @@ public class kenalan {
         this.Jjendela = Jjendela;
     }
 
-    public String getAnaPintuJendela() {
-        return AnaPintuJendela;
+    public String getAnalisiskondisi() {
+        return Analisiskondisi;
     }
 
-    public void setAnaPintuJendela(String AnaPintuJendela) {
-        this.AnaPintuJendela = AnaPintuJendela;
+    public void setAnalisiskondisi(String Analisiskondisi) {
+        this.Analisiskondisi = Analisiskondisi;
     }
 
-    public int getIntKontak() {
+    public int getKontak() {
         return Kontak;
     }
 
-    public void setIntKontak(int IntKontak) {
-        this.Kontak = IntKontak;
+    public void setKontak(int Kontak) {
+        this.Kontak = Kontak;
     }
 
     public String getKondisiKontak() {
@@ -183,12 +183,12 @@ public class kenalan {
         this.PosisiKontak = PosisiKontak;
     }
 
-    public int getIntKabelLCD() {
+    public int getKabelLCD() {
         return KabelLCD;
     }
 
-    public void setIntKabelLCD(int IntKabelLCD) {
-        this.KabelLCD = IntKabelLCD;
+    public void setKabelLCD(int KabelLCD) {
+        this.KabelLCD = KabelLCD;
     }
 
     public String getKondisiKabelLCD() {
@@ -207,12 +207,12 @@ public class kenalan {
         this.PosisiKabelLCD = PosisiKabelLCD;
     }
 
-    public int getIntLampu() {
+    public int getLampu() {
         return Lampu;
     }
 
-    public void setIntLampu(int IntLampu) {
-        this.Lampu = IntLampu;
+    public void setLampu(int Lampu) {
+        this.Lampu = Lampu;
     }
 
     public String getKondisiLampu() {
@@ -231,12 +231,12 @@ public class kenalan {
         this.PosisiLampu = PosisiLampu;
     }
 
-    public int getIntKipas() {
+    public int getKipas() {
         return Kipas;
     }
 
-    public void setIntKipas(int IntKipas) {
-        this.Kipas = IntKipas;
+    public void setKipas(int Kipas) {
+        this.Kipas = Kipas;
     }
 
     public String getKondisiKipas() {
@@ -255,12 +255,12 @@ public class kenalan {
         this.PosisiKipas = PosisiKipas;
     }
 
-    public int getIntAC() {
+    public int getAC() {
         return AC;
     }
 
-    public void setIntAC(int IntAC) {
-        this.AC = IntAC;
+    public void setAC(int AC) {
+        this.AC = AC;
     }
 
     public String getKondisiAC() {
@@ -295,12 +295,12 @@ public class kenalan {
         this.Bandwidth = Bandwidth;
     }
 
-    public int getIntCCTV() {
+    public int getCCTV() {
         return CCTV;
     }
 
-    public void setIntCCTV(int IntCCTV) {
-        this.CCTV = IntCCTV;
+    public void setCCTV(int CCTV) {
+        this.CCTV = CCTV;
     }
 
     public String getKondisiCCTV() {
@@ -319,52 +319,14 @@ public class kenalan {
         this.PosisiCCTV = PosisiCCTV;
     }
 
-    public int getKlantai() {
-        return Klantai;
+    
+
+    public String getAnalisisbersih() {
+        return Analisisbersih;
     }
 
-    public void setKlantai(int Klantai) {
-        this.Klantai = Klantai;
-    }
-
-    public int getKdinding() {
-        return Kdinding;
-    }
-
-    public void setKdinding(int Kdinding) {
-        this.Kdinding = Kdinding;
-    }
-
-    public int getKatap() {
-        return Katap;
-    }
-
-    public void setKatap(int Katap) {
-        this.Katap = Katap;
-    }
-
-    public int getKpintu() {
-        return Kpintu;
-    }
-
-    public void setKpintu(int Kpintu) {
-        this.Kpintu = Kpintu;
-    }
-
-    public int getKjendela() {
-        return Kjendela;
-    }
-
-    public void setKjendela(int Kjendela) {
-        this.Kjendela = Kjendela;
-    }
-
-    public String getAnalisis() {
-        return Analisis;
-    }
-
-    public void setAnalisis(String Analisis) {
-        this.Analisis = Analisis;
+    public void setAnalisisbersih(String Analisisbersih) {
+        this.Analisisbersih = Analisisbersih;
     }
 
     public int getSirkulasi() {
@@ -471,51 +433,44 @@ public class kenalan {
         this.kondisi = kondisi;
     }
 
-    public int getKontak() {
-        return Kontak;
+    public void setBersihlantai(String Bersihlantai) {
+        this.Bersihlantai = Bersihlantai;
     }
 
-    public void setKontak(int Kontak) {
-        this.Kontak = Kontak;
+    public void setBersihdinding(String Bersihdinding) {
+        this.Bersihdinding = Bersihdinding;
     }
 
-    public int getKabelLCD() {
-        return KabelLCD;
+    public void setBersihatap(String Bersihatap) {
+        this.Bersihatap = Bersihatap;
     }
 
-    public void setKabelLCD(int KabelLCD) {
-        this.KabelLCD = KabelLCD;
+    public void setBersihpintu(String Bersihpintu) {
+        this.Bersihpintu = Bersihpintu;
     }
 
-    public int getLampu() {
-        return Lampu;
+    public void setBersihjendela(String Bersihjendela) {
+        this.Bersihjendela = Bersihjendela;
     }
 
-    public void setLampu(int Lampu) {
-        this.Lampu = Lampu;
+    public String getBersihlantai() {
+        return Bersihlantai;
     }
 
-    public int getKipas() {
-        return Kipas;
+    public String getBersihdinding() {
+        return Bersihdinding;
     }
 
-    public void setKipas(int Kipas) {
-        this.Kipas = Kipas;
+    public String getBersihatap() {
+        return Bersihatap;
     }
 
-    public int getAC() {
-        return AC;
+    public String getBersihpintu() {
+        return Bersihpintu;
     }
 
-    public void setAC(int AC) {
-        this.AC = AC;
+    public String getBersihjendela() {
+        return Bersihjendela;
     }
 
-    public int getCCTV() {
-        return CCTV;
-    }
-
-    public void setCCTV(int CCTV) {
-        this.CCTV = CCTV;
-    }
 }

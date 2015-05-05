@@ -1,8 +1,11 @@
 package jadi;
 
 public class view {
-    Proses p= new Proses();
-    p.
+    
+    public static void main(String [] args){
+        Proses pro = new Proses();
+        pro.ruang();
+    }
     
     
 }

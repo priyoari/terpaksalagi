@@ -39,34 +39,34 @@ public class kontrol {
     
     // lingkungan
     System.out.println("Kondisi Lantai  : ");
-    System.out.println("1. Bersih");
-    System.out.println("2. Kotor");
-    System.out.print("Masukkan Pilihan    : ");
-    kenal.setKlantai(scan.nextInt());
+//    System.out.println("1. Bersih");
+//    System.out.println("2. Kotor");
+//    System.out.print("Masukkan Pilihan    : ");
+    kenal.setBersihlantai(scan.next());
             
     System.out.println("Kondisi Dinding : ");
-    System.out.println("1. Bersih");
-    System.out.println("2. Kotor");
-    System.out.print("Masukkan Pilihan    : ");
-    kenal.setKdinding(scan.nextInt());
+//    System.out.println("1. Bersih");
+//    System.out.println("2. Kotor");
+//    System.out.print("Masukkan Pilihan    : ");
+    kenal.setBersihdinding(scan.next());
             
     System.out.println("Kondisi Atap    : ");
-    System.out.println("1. Bersih");
-    System.out.println("2. Kotor");
-    System.out.print("Masukkan Pilihan    : ");
-    kenal.setKatap(scan.nextInt());
+//    System.out.println("1. Bersih");
+//    System.out.println("2. Kotor");
+//    System.out.print("Masukkan Pilihan    : ");
+    kenal.setBersihatap(scan.next());
             
     System.out.println("Kondisi Pintu   : ");
-    System.out.println("1. Bersih");
-    System.out.println("2. Kotor");
-    System.out.print("Masukkan Pilihan    : ");
-    kenal.setKpintu(scan.nextInt());
+//    System.out.println("1. Bersih");
+//    System.out.println("2. Kotor");
+//    System.out.print("Masukkan Pilihan    : ");
+    kenal.setBersihpintu(scan.next());
             
     System.out.println("Kondisi Jendela : ");
-    System.out.println("1. Bersih");
-    System.out.println("2. Kotor");
-    System.out.print("Masukkan Pilihan    : ");
-    kenal.setKjendela(scan.nextInt());
+//    System.out.println("1. Bersih");
+//    System.out.println("2. Kotor");
+//    System.out.print("Masukkan Pilihan    : ");
+    kenal.setBersihjendela(scan.next());
         
     // kebersihan
     System.out.print("masukkan jumlah sirkulasi:");
