@@ -12,6 +12,23 @@ package jadi;
 import java.util.Scanner;
 public class Barang extends Identitas {
     Scanner scan= new Scanner (System.in);
+        private int jumlah_pintu;
+        private int jumlah_jendela;
+        private int kontak;
+        private String kondisi_kontak;
+
+    public Barang(String nm_ruang, String lokasi, String prog, int p, int l, int jumlah_kursi, int jumla_pintu, int jumlah_jendela, int jumlah_stopkontak, int rasio, String analisiskondisi, int stopkontak, String kondisi, String posisi, int luas, int kabel_lcd, String kondisi_kabel, String posisi_kabel, int lampu, String kondisi_lampu, String posisi_lampu, int kipas, String kondisi_kipas, String posisi_kipas, int AC, String kondisi_ac, String posisi_ac, int ssid, int bandwitd, String kondisi_cctv, String posisi_CCTV, String kondisi_lantai, String kodisi_atap, String kondisi_pintu, String kondisi_jendela, String cek_kondisi_bersih, int jumlah_pintu) {
+        super(nm_ruang, lokasi, prog, p, l, jumlah_kursi, jumla_pintu, jumlah_jendela, jumlah_stopkontak, rasio, analisiskondisi, stopkontak, kondisi, posisi, luas, kabel_lcd, kondisi_kabel, posisi_kabel, lampu, kondisi_lampu, posisi_lampu, kipas, kondisi_kipas, posisi_kipas, AC, kondisi_ac, posisi_ac, ssid, bandwitd, kondisi_cctv, posisi_CCTV, kondisi_lantai, kodisi_atap, kondisi_pintu, kondisi_jendela, cek_kondisi_bersih, jumlah_pintu);
+    }
+
+    
+    
+    
+   
+   
+    
+    
+   
     
     void input_infrastruktur(){
 //    System.out.println("Masukkan panjang ruang  : ");
@@ -21,49 +38,50 @@ public class Barang extends Identitas {
 //    kenal.setLebar(scan.nextInt());
             
     System.out.println("Masukkan jumlah pintu   : ");
-    kenal.setJpintu(scan.nextInt());
+    this.jumlah_pintu=scan.nextInt();
         
     System.out.println("Masukkan jumlah jendela : ");
-    kenal.setJjendela(scan.nextInt());
+    this.jumlah_jendela=scan.nextInt();
         
     // jumlah,kondisi dan posisi
     System.out.println("Jumlah stop kontak: ");
-    kenal.setKontak(scan.nextInt());
+    this.kontak=scan.nextInt();
     System.out.print("Kondisi stop kontak baik (ya/tidak): ");
-    kenal.setKondisiKontak(scan.next());
+    this.kondisi_kontak=scan.next();
     System.out.print("Posisi stop kontak dekat dosen & dipojok (ya/tidak): ");
-    kenal.setPosisiKontak(scan.next());
+    
     
     // lingkungan
     System.out.println("Kondisi Lantai  : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihlantai(scan.next().toUpperCase());
+   // this.=scan.next();
             
     System.out.println("Kondisi Dinding : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihdinding(scan.next().toUpperCase());
+    this.getBersihdinding();
+    
             
     System.out.println("Kondisi Atap    : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihatap(scan.next().toUpperCase());
+    this.getBersihatap();
             
     System.out.println("Kondisi Pintu   : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihpintu(scan.next().toUpperCase());
+    this.getBersihpintu();
             
     System.out.println("Kondisi Jendela : ");
 //    System.out.println("1. Bersih");
 //    System.out.println("2. Kotor");
 //    System.out.print("Masukkan Pilihan    : ");
-    kenal.setBersihjendela(scan.next().toUpperCase());
+    this.getBersihjendela();
     
 //    System.out.println("input jumlah stop kontak:");
 //    kenal.getKontak(scan.nextInt());
@@ -74,22 +92,22 @@ public class Barang extends Identitas {
     }
     
     @Override
-    boolean ruang(){
+    boolean ruang(int p, int l,int luas){
         System.out.println("Masukan nama ruang: ");
-        kenal.setNamaRuang(scan.next());
+        this.getNamaRuang();
         System.out.println("Masukan lokasi ruang: ");
-        kenal.setLokasiRuang(scan.next());
+        this.getLokasiRuang();
         System.out.println("Pilih Program Studi/Fakultas");
-        kenal.setProgramStudi(scan.next());
+        this.getProgramStudi();
         
-        if(kenal.getJpintu()>=2){
+        if(this.getJpintu()>=2){
             System.out.println("Jumlah pintu sesuai");
             return true;
         }else{
             System.out.println("Jumlah pintu tidak sesuai");
         }
        //ini yang jendela
-       if(kenal.getJjendela()<1){
+       if(this.getJjendela()<1){
             System.out.println("Jumlah jendela sesuai");
             return true;
        }else{
@@ -99,10 +117,11 @@ public class Barang extends Identitas {
         return false;
     }
     
+    
     boolean bangunan(){
-       if(kenal.getBersihlantai().equals("BERSIH")){
+       if(this.getBersihlantai().equals("BERSIH")){
             System.out.println("Kondisi lantai bersih, Sesuai");
-            return true; 
+             
         }   
         else{
             System.out.println("Kondisi lantai kotor, Tidak sesuai");
@@ -110,9 +129,9 @@ public class Barang extends Identitas {
         }
         
         //atap
-        if(kenal.getBersihatap().equals("BERSIH")){
+        if(this.getBersihatap().equals("BERSIH")){
             System.out.println("Kondisi atap bersih, Sesuai");
-           return true;
+           
         }
         else{
             System.out.println("Kondisi atap kotor, Tidak sesuai");
@@ -120,9 +139,9 @@ public class Barang extends Identitas {
         }
         
         //pintu
-         if(kenal.getBersihpintu().equals("BERSIH")){
+         if(this.getBersihpintu().equals("BERSIH")){
             System.out.println("Kondisi pintu bersih, Sesuai");
-            return true;
+            
          }
          else{
             System.out.println("Kondisi pintu kotor, Tidak sesuai");
@@ -130,26 +149,54 @@ public class Barang extends Identitas {
          }
          
            //jendela
-         if(kenal.getBersihjendela().equals("BERSIH")){
+         if(this.getBersihjendela().equals("BERSIH")){
             System.out.println("Kondisi jendela bersih, Sesuai");
-            return true;
+            //return true;
          }
          else{
             System.out.println("Kondisi jendela kotor, Tidak sesuai"); 
          }
          
-         if(kenal.getKontak()>=4&&kenal.getKondisiKontak().equals("ya")&&kenal.getPosisiKontak().equals("ya")){
+         if(this.getKontak()>=4&&this.getKondisiKontak().equals("ya")&&this.getPosisiKontak().equals("ya")){
             System.out.println("Sesuai");
-            return true;
+            //return true;
          }
-        if(kenal.getKontak()<=4||kenal.getKondisiKontak().equals("tidak")||kenal.getPosisiKontak().equals("tidak")){
+        if(this.getKontak()<=4||this.getKondisiKontak().equals("tidak")||this.getPosisiKontak().equals("tidak")){
             System.out.println("tidak Sesuai");
-            return true;
+            //return true;
         }
         
         
          
          return false;  
+    }
+
+    /**
+     * @return the jumlah_pintu
+     */
+    public int getJumlah_pintu() {
+        return jumlah_pintu;
+    }
+
+    /**
+     * @return the jumlah_jendela
+     */
+    public int getJumlah_jendela() {
+        return jumlah_jendela;
+    }
+
+    /**
+     * @return the kontak
+     */
+    public int getKontak() {
+        return kontak;
+    }
+
+    /**
+     * @return the kondisi_kontak
+     */
+    public String getKondisi_kontak() {
+        return kondisi_kontak;
     }
     
 }
