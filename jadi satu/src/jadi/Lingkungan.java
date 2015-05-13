@@ -43,13 +43,13 @@ public class Lingkungan extends Identitas{
         System.out.println("1. Bocor");
         System.out.println("2. Tidak bocor");
         System.out.print("Masukkan Pilihan    : ");
-        kenal.setTkebocoran(scan.nextInt());
+        this.getTkebocoran();
 
         System.out.println("Tingkat kerusakan :");
         System.out.println("1. Rusak");
         System.out.println("2. Baik");
         System.out.print("Masukkan Pilihan    : ");
-        kenal.setTkerusakan(scan.nextInt());
+        this.getTkerusakan();
 
         System.out.println("Tingkat keausan :");
         System.out.println("1. Aus");
