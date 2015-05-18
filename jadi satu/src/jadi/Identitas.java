@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jadi;
 
-/**
- *
- * @author mozaze
- */
 import java.util.Scanner;
-public class Identitas {
+public abstract class Identitas {
    // kenalan kenal= new kenalan();
     private String namaRuang;
     private String lokasiRuang;
@@ -144,6 +135,10 @@ public class Identitas {
 //    System.out.println("Masukkan jumlah jendela : ");
 //    kenal.setJjendela(scan.nextInt());
     }
+    
+    
+    
+    abstract boolean seleksi();
     
     
     boolean ruang(int p,int l,int luas){
