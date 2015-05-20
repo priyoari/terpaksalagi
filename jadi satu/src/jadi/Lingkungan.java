@@ -85,8 +85,6 @@ public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
         this.Tkerusakan=scan.nextInt();
         System.out.println("1.ya");
         System.out.println("2.tidak");
-        //this(scan.next());
-        //To change body of generated methods, choose Tools | Templates.
     }
 
     
