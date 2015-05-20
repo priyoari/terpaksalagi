@@ -11,6 +11,6 @@ package jadi;
  */
 public interface Spesialisnya_Kelas {
     
-    abstract void tes();
+    abstract void isi();
     
 }

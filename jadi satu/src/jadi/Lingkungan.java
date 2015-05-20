@@ -65,7 +65,7 @@ public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
     }
 
     @Override
-    public void tes() {
+    public void isi() {
         System.out.println("apakah bising:");
         this.Tkebisingan=scan.nextInt();
         System.out.println("1.ya");
