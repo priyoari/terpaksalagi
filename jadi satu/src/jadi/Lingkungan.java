@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jadi;
 
-/**
- *
- * @author mozaze
- */
 import java.io.*;
 import java.util.Scanner;
 public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
@@ -120,7 +111,7 @@ public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
            FileOutputStream fs= new FileOutputStream("lingkungan.txt");
            ObjectOutputStream os= new ObjectOutputStream(fs);
            System.out.println("masukkan tinggkat kebisangan:");
-           os.writeObject(this.Tbau);
+           os.writeObject(this.Tkebisingan);
             System.out.println("Masukkan tingkat bocor");
             os.writeObject(this.Tkebocoran);
             System.out.println("Masukkan tingkat ke ausan");
