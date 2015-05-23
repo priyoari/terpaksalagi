@@ -1,6 +1,8 @@
 package jadi;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 public class Barang extends Identitas implements Spesialisnya_Kelas{
@@ -207,70 +209,73 @@ public class Barang extends Identitas implements Spesialisnya_Kelas{
 
     @Override
     boolean seleksi() {
-        if(this.getJpintu()>=2){
-            System.out.println("Jumlah pintu sesuai");
-            return true;
-        }else{
-            System.out.println("Jumlah pintu tidak sesuai");
-        }
-       //ini yang jendela
-       if(this.getJjendela()<1){
-            System.out.println("Jumlah jendela sesuai");
-            return true;
-       }else{
-            System.out.println("Jumlah jendela tidak sesuai");
-        }
-       
-       if(this.getBersihlantai().equals("BERSIH")){
-            System.out.println("Kondisi lantai bersih, Sesuai");
-             
-        }   
-        else{
-            System.out.println("Kondisi lantai kotor, Tidak sesuai");
-            //return false;
-        }
-        
-        //atap
-        if(this.getBersihatap().equals("BERSIH")){
-            System.out.println("Kondisi atap bersih, Sesuai");
-           
-        }
-        else{
-            System.out.println("Kondisi atap kotor, Tidak sesuai");
-            //return false;
-        }
-        
-        //pintu
-         if(this.getBersihpintu().equals("BERSIH")){
-            System.out.println("Kondisi pintu bersih, Sesuai");
+        try{
+            ObjectInputStream is=new ObjectInputStream(new FileInputStream("barang.txt"));
+            this.jumlah_pintu=(int) is.readObject();
+            this.jumlah_jendela=(int) is.readObject();
+            this.kondisi_lantai=(int) is.readObject();
+            this.kondisi_atap=(int) is.readObject();
+            this.kondisi_pintu=(int) is.readObject();
+            this.kondisi_jendela=(int) is.readObject();
+            this.kondisi_kontak=(String) is.readObject();
             
-         }
-         else{
-            System.out.println("Kondisi pintu kotor, Tidak sesuai");
-            //return false;
-         }
+            if(this.getJpintu()>=2){
+                System.out.println("Jumlah pintu sesuai");
+                return true;
+            }else{
+                System.out.println("Jumlah pintu tidak sesuai");
+            }
+            //ini yang jendela
+            if(this.getJjendela()<1){
+                System.out.println("Jumlah jendela sesuai");
+                return true;
+            }else{
+                System.out.println("Jumlah jendela tidak sesuai");
+            }
+       
+            if(this.getBersihlantai().equals("BERSIH")){
+                System.out.println("Kondisi lantai bersih, Sesuai");
+            }else{
+                System.out.println("Kondisi lantai kotor, Tidak sesuai");
+                //return false;
+            }
+        
+            //atap
+            if(this.getBersihatap().equals("BERSIH")){
+                System.out.println("Kondisi atap bersih, Sesuai");
+            }else{
+                System.out.println("Kondisi atap kotor, Tidak sesuai");
+                //return false;
+            }
+            //pintu
+            if(this.getBersihpintu().equals("BERSIH")){
+                System.out.println("Kondisi pintu bersih, Sesuai");
+            }else{
+                System.out.println("Kondisi pintu kotor, Tidak sesuai");
+                //return false;
+            }
+            //jendela
+            if(this.getBersihjendela().equals("BERSIH")){
+                System.out.println("Kondisi jendela bersih, Sesuai");
+                //return true;
+            }else{
+                System.out.println("Kondisi jendela kotor, Tidak sesuai"); 
+            }
          
-           //jendela
-         if(this.getBersihjendela().equals("BERSIH")){
-            System.out.println("Kondisi jendela bersih, Sesuai");
-            //return true;
-         }
-         else{
-            System.out.println("Kondisi jendela kotor, Tidak sesuai"); 
-         }
-         
-         if(this.getKontak()>=4&&this.getKondisiKontak().equals("ya")&&this.getPosisiKontak().equals("ya")){
-            System.out.println("Sesuai");
-            //return true;
-         }
-        if(this.getKontak()<=4||this.getKondisiKontak().equals("tidak")||this.getPosisiKontak().equals("tidak")){
-            System.out.println("tidak Sesuai");
-            //return true;
+            if(this.getKontak()>=4&&this.getKondisiKontak().equals("ya")&&this.getPosisiKontak().equals("ya")){
+               System.out.println("Sesuai");
+               //return true;
+            }
+            
+            if(this.getKontak()<=4||this.getKondisiKontak().equals("tidak")||this.getPosisiKontak().equals("tidak")){
+               System.out.println("tidak Sesuai");
+               //return true;
+            }
+        }catch(Exception ex){
+            ex.printStackTrace();
         }
-        
-        
          
-         return false;  
+        return false;  
 
         //return false; //To change body of generated methods, choose Tools | Templates.
     }
