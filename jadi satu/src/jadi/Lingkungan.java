@@ -9,6 +9,7 @@ package jadi;
  *
  * @author mozaze
  */
+import java.io.*;
 import java.util.Scanner;
 public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
     //@Override;
@@ -34,11 +35,30 @@ public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
     
     }
 
+   
+
+    
+
     @Override
     boolean seleksi() {
         //To change body of generated methods, choose Tools | Templates.
-        if(this.getTkebisingan()==1){
-            System.out.println("Tidak sesuai");
+       try{
+           ObjectInputStream is= new ObjectInputStream(new FileInputStream("lingkungan.txt"));
+           this.Tkebisingan=(int) is.readObject();
+           this.Tbau=(int) is.readObject();
+           this.Tkeausan=(int) is.readObject();
+           this.Tkebocoran=(int) is.readObject();
+           this.Tkerusakan=(int) is.readObject();
+           
+       if(this.getTkebisingan()==1){
+           System.out.println("Tidak sesuai");
+            return false;
+        }
+        else{
+            System.out.println("Sesuai");
+        } 
+       if(this.getTkebisingan()==1){
+           System.out.println("Tidak sesuai");
             return false;
         }
         else{
@@ -61,31 +81,81 @@ public class Lingkungan extends Identitas implements Spesialisnya_Kelas{
             System.out.println("Sesuai");
         }
         
+          
+       }catch(Exception ex){
+           ex.printStackTrace();
+       }
+        
+//        if(this.getTkebisingan()==1){
+//            System.out.println("Tidak sesuai");
+//            return false;
+//        }
+//        else{
+//            System.out.println("Sesuai");
+//        }
+//        //bau
+//        if(this.getTbau()==1){
+//            System.out.println("Tidak sesuai");
+//            return false;
+//        }
+//       else{
+//            System.out.println("Sesuai");
+//         }
+//        //bocor
+//        if(this.getTkebocoran()==1){
+//            System.out.println("Tidak sesuai");
+//            return false;
+//        }
+//        else{
+//            System.out.println("Sesuai");
+//        }
+//        
         return true;
     }
 
     @Override
     public void isi() {
-        System.out.println("apakah bising:");
-        this.Tkebisingan=scan.nextInt();
-        System.out.println("1.ya");
-        System.out.println("2.tidak");
-        System.out.println();
-        System.out.println("apakah bocor:");
-        this.Tkebocoran=scan.nextInt();
-        System.out.println("1.ya");
-        System.out.println("2.tidak");
-        System.out.println();
-        System.out.println("apakah aus:");
-        this.Tkeausan=scan.nextInt();
-        System.out.println("1.ya");
-        System.out.println("2.tidak");
-        System.out.println();
-        System.out.println("apakah rusak:");
-        this.Tkerusakan=scan.nextInt();
-        System.out.println("1.ya");
-        System.out.println("2.tidak");
+        
+        try{
+           FileOutputStream fs= new FileOutputStream("lingkungan.txt");
+           ObjectOutputStream os= new ObjectOutputStream(fs);
+           System.out.println("masukkan tinggkat kebisangan:");
+           os.writeObject(this.Tbau);
+            System.out.println("Masukkan tingkat bocor");
+            os.writeObject(this.Tkebocoran);
+            System.out.println("Masukkan tingkat ke ausan");
+            os.writeObject(this.Tkeausan);
+            System.out.println("Masukkan kerusakan:");
+            os.writeObject(this.Tkerusakan);
+            os.close();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        
+        
+//        System.out.println("apakah bising:");
+//        this.Tkebisingan=scan.nextInt();
+//        System.out.println("1.ya");
+//        System.out.println("2.tidak");
+//        System.out.println();
+//        System.out.println("apakah bocor:");
+//        this.Tkebocoran=scan.nextInt();
+//        System.out.println("1.ya");
+//        System.out.println("2.tidak");
+//        System.out.println();
+//        System.out.println("apakah aus:");
+//        this.Tkeausan=scan.nextInt();
+//        System.out.println("1.ya");
+//        System.out.println("2.tidak");
+//        System.out.println();
+//        System.out.println("apakah rusak:");
+//        this.Tkerusakan=scan.nextInt();
+//        System.out.println("1.ya");
+//        System.out.println("2.tidak");
     }
+    
+   
+        
 
     
 }
