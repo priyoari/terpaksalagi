@@ -5,6 +5,11 @@
  */
 package jadi;
 
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 /**
  *
  * @author Priyo
@@ -341,8 +346,18 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Di pojok", "Dekat dosen", "Jauh", " " }));
 
         jRadioButton1.setText("Baik");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         jRadioButton2.setText("Rusak");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Kembali");
 
@@ -1003,6 +1018,19 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
     private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton27ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        boolean jRad
+        if(jRadioButton1.setSelected(true)){
+            jRadioButton2.setSelected(false);
+        }
+// TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        jRadioButton2.setSelected(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
