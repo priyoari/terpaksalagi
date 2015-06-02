@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package jadi;
 
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
 /**
  *
  * @author Priyo
@@ -1020,8 +1012,8 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton27ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        boolean jRad
-        if(jRadioButton1.setSelected(true)){
+        if(jRadioButton1.isSelected()){
+            jRadioButton1.setSelected(true);
             jRadioButton2.setSelected(false);
         }
 // TODO add your handling code here:
