@@ -403,9 +403,9 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jRadioButton22" min="-2" max="-2" attributes="0"/>
+                                              <Component id="RD_Login1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="RD_Login2" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -443,7 +443,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="RD_kontak1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
@@ -459,25 +459,25 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton19" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_lampu1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_kipas1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_AC1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_CCTV1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton17" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_kipas2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_CCTV2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_AC2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_lampu2" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jRadioButton11" min="-2" max="-2" attributes="0"/>
+                                              <Component id="RD_LCD1" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_kontak2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="RD_LCD2" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -517,40 +517,40 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_LCD2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_LCD1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_lampu2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_lampu1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_kipas2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_kipas1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_AC2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_AC1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton21" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_CCTV2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RD_CCTV1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -558,8 +558,8 @@
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RD_kontak1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RD_kontak2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -575,8 +575,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton22" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton20" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RD_Login1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RD_Login2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox10" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="14" max="32767" attributes="0"/>
@@ -617,20 +617,20 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="RD_kontak1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baik"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RD_kontak1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="RD_kontak2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rusak"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RD_kontak2ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton5">
@@ -642,6 +642,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Simpan &amp; Lanjut"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
@@ -704,62 +707,65 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField16">
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+            <Component class="javax.swing.JRadioButton" name="RD_LCD1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Berfungsi"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RD_LCD1ActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+            <Component class="javax.swing.JRadioButton" name="RD_LCD2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+            <Component class="javax.swing.JRadioButton" name="RD_lampu2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rusak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+            <Component class="javax.swing.JRadioButton" name="RD_lampu1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baik"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton15">
+            <Component class="javax.swing.JRadioButton" name="RD_kipas2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rusak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton16">
+            <Component class="javax.swing.JRadioButton" name="RD_kipas1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baik"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton17">
+            <Component class="javax.swing.JRadioButton" name="RD_AC2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rusak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton18">
+            <Component class="javax.swing.JRadioButton" name="RD_AC1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baik"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton19">
+            <Component class="javax.swing.JRadioButton" name="RD_CCTV1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baik"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton20">
+            <Component class="javax.swing.JRadioButton" name="RD_Login2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton21">
+            <Component class="javax.swing.JRadioButton" name="RD_CCTV2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rusak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton22">
+            <Component class="javax.swing.JRadioButton" name="RD_Login1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ya"/>
               </Properties>
