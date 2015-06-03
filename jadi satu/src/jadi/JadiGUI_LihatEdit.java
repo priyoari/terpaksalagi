@@ -10,6 +10,7 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
     /** Creates new form JadiGUI2 */
     public JadiGUI_LihatEdit() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /** This method is called from within the constructor to
@@ -40,6 +41,7 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         jList1.setModel(new javax.swing.AbstractListModel() {
@@ -203,7 +205,8 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+            this.setVisible(false);
+            
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

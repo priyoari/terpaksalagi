@@ -2,6 +2,8 @@
 package jadi;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ComboBoxModel;
+import javax.swing.JComboBox;
 
 
 /**
@@ -14,11 +16,124 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
      * Creates new form JadiGUI3
      */
     public JadiGUI_Isi() {
+        
+        initComponents();
+        this.setLocationRelativeTo(this);
+        
         ButtonGroup kontak = new ButtonGroup();
         kontak.add(RD_kontak1);
         kontak.add(RD_kontak2);
-        initComponents();
         
+        ButtonGroup lcd = new ButtonGroup();
+        lcd.add(RD_LCD1);
+        lcd.add(RD_LCD2);
+        
+        ButtonGroup lampu = new ButtonGroup();
+        lampu.add(RD_lampu1);
+        lampu.add(RD_lampu2);
+        
+        ButtonGroup kipas = new ButtonGroup();
+        kipas.add(RD_kipas1);
+        kipas.add(RD_kipas2);
+        
+        ButtonGroup ac = new ButtonGroup();
+        ac.add(RD_AC1);
+        ac.add(RD_AC2);
+        
+        ButtonGroup cctv = new ButtonGroup();
+        cctv.add(RD_CCTV1);
+        cctv.add(RD_CCTV2);
+        
+        ButtonGroup login = new ButtonGroup();
+        login.add(RD_Login1);
+        login.add(RD_Login2);
+        
+        ButtonGroup lantai = new ButtonGroup();
+        lantai.add(jRadioButton3);
+        lantai.add(jRadioButton8);
+        
+        ButtonGroup dinding = new ButtonGroup();
+        dinding.add(jRadioButton4);
+        dinding.add(jRadioButton9);
+        
+        ButtonGroup atap = new ButtonGroup();
+        atap.add(jRadioButton5);
+        atap.add(jRadioButton10);
+        
+        ButtonGroup pintu = new ButtonGroup();
+        pintu.add(jRadioButton6);
+        pintu.add(jRadioButton23);
+        
+        ButtonGroup jendela = new ButtonGroup();
+        jendela.add(jRadioButton7);
+        jendela.add(jRadioButton24);
+        
+        ButtonGroup bising = new ButtonGroup();
+        bising.add(jRadioButton25);
+        bising.add(jRadioButton26);
+        
+        ButtonGroup bau = new ButtonGroup();
+        bau.add(jRadioButton28);
+        bau.add(jRadioButton27);
+        
+        ButtonGroup bocor = new ButtonGroup();
+        bocor.add(jRadioButton29);
+        bocor.add(jRadioButton30);
+        
+        ButtonGroup rusak = new ButtonGroup();
+        rusak.add(jRadioButton31);
+        rusak.add(jRadioButton32);
+        
+        ButtonGroup aus = new ButtonGroup();
+        aus.add(jRadioButton33);
+        aus.add(jRadioButton34);
+        
+        ButtonGroup kokoh = new ButtonGroup();
+        kokoh.add(jRadioButton35);
+        kokoh.add(jRadioButton40);
+        
+        ButtonGroup kunci = new ButtonGroup();
+        kunci.add(jRadioButton36);
+        kunci.add(jRadioButton39);
+        
+        ButtonGroup aman = new ButtonGroup();
+        aman.add(jRadioButton37);
+        aman.add(jRadioButton38);
+        
+        Object fai[] = new Object[]{"Syari'ah","Tarbiyah","Ekonomi Syari'ah"};
+        Object feb[] = new Object[]{"Manajemen","Akuntansi","Ilmu Ekonomi dan Studi Pembangunan","D3 Keu & Bank"};
+        Object hukum[] = new Object[]{"Hukum"};
+        Object ilkes[] = new Object[]{"Ilmu Keperawatan","Farmasi","S1 Fisioterapi","D3-Keperawatan"};
+        Object fisip[] = new Object[]{"Ilmu Kesejahteraan Sosial","Ilmu Pemerintahan","Ilmu Komunikasi","Sosiologi","Hubungan Internasional"};
+        Object kedok[] = new Object[]{"Pendidikan Dokter"};
+        Object pend[] = new Object[]{"Pend. Bhs. Indonesia","Pend. Bahasa Inggris","Pend. Biologi","Pend. Matematika","PPKN (Civic Hukum)","Pendidikan Guru SD (PGSD)"};
+        Object pert[] = new Object[]{"Agroteknologi","Agribisnis","Ilmu dan Teknologi Pangan","Kehutanan","Peternakan","Perikanan"};
+        Object psi[] = new Object[]{"Psikologi"};
+        Object teknik[] = new Object[]{"Teknik Sipil","Teknik Mesin","Teknik Elektro","Teknik Informatika","Teknik Industri","D3 Elektronika"};
+        
+        
+       // combo=new JCombbox(jComboBox3);
+        if(jComboBox2.getSelectedIndex()==0){
+            jComboBox3.setEnabled(true);
+            jComboBox3.removeAllItems();
+            for(int i=0;i<fai.length;i++){
+                jComboBox3.addItem(fai[i]);
+            }
+        }else if(jComboBox2.getSelectedIndex()==1){
+            jComboBox3.setEnabled(true);
+            jComboBox3.removeAllItems();
+            for(int j=0;j<feb.length;j++){   
+                jComboBox3.addItem(feb[j]);
+            }
+        }
+        System.out.println(RD_LCD1.getText());
+        System.out.println(jComboBox4.getSelectedIndex());
+        Object a[] = new Object[] {1, 2, 3, 4};
+        JComboBox b = new JComboBox(a);
+        
+        //jComboBox3.addItem(fai.length);
+        
+        //jComboBox3.addItem(a[0]);
     }
 
     /**
@@ -174,6 +289,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
         jButton10.setText("Simpan & Lanjut");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setResizable(false);
 
         jLabel1.setText("Lokasi Ruang");
@@ -182,11 +298,17 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
 
         jLabel2.setText("Nama Ruang");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText(".");
 
         jLabel4.setText("Fakultas / Jurusan");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Agama Islam", "Ekonomi dan Bisnis", "Hukum", "Ilmu Kesehatan", "Ilmu Sosial dan Politik", "Kedokteran", "Keguruan & Ilmu Pendidikan", "Pertanian dan Peternakan", "Psikologi", "Teknik", " " }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -341,7 +463,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Posisi Sarana");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Di pojok", "Dekat dosen", "Jauh", " " }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Di pojok", "Dekat dosen", "Jauh" }));
 
         RD_kontak1.setText("Baik");
         RD_kontak1.addActionListener(new java.awt.event.ActionListener() {
@@ -1047,6 +1169,10 @@ public class JadiGUI_Isi extends javax.swing.JFrame {
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments

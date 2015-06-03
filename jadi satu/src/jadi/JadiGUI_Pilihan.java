@@ -12,6 +12,7 @@ public class JadiGUI_Pilihan extends javax.swing.JFrame {
      */
     public JadiGUI_Pilihan() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
