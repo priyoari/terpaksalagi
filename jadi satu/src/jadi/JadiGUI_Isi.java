@@ -1279,12 +1279,16 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 
           } 
           
-          
+          String sirkulasi=inputudara.getText();
           String cahaya=input_nilai_cahaya.getText();
-          String sirkulasi=input_nilai_cahaya.getText();
           String lembab=input_lembab.getText();
           String suhu=input_suh.getText();
           String bisingnya = null;
+          if(ini_bising.isSelected()){
+              bisingnya=ini_bising.getText();
+          }else if(ini_gakbising.isSelected()){
+              bisingnya=ini_gakbising.getText();
+          }
           
           
           String baunya = null;
@@ -1359,13 +1363,13 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             p.setString(1, lan.getNamaRuang());
 //            p.setString(2,lan.getProgramStudi());
 //            p.setString(3, fakultas);
-            p.setString(2, lan.getBersihlantai());
+            p.setString(2, lan.getBersihlantai()+ana.getKlantai());
             p.setString(3, lan.getBersihdinding());
             p.setString(4, lan.getBersihatap());
             p.setString(5, lan.getBersihpintu());
             p.setString(6, lan.getBersihjendela());
-            p.setString(7, cahaya);
-            p.setString(8, sirkulasi);
+            p.setString(7, sirkulasi);
+            p.setString(8, cahaya);
             p.setString(9, lembab);
             p.setString(10, suhu);
             p.setString(11, bisingnya);
@@ -1380,7 +1384,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             p.close();
           }
           catch(SQLException t){
-              JOptionPane.showMessageDialog(this, "ada yang error saat isi data");
+              JOptionPane.showMessageDialog(this, "ada yang error saat isi data"+t);
           }
           
     }//GEN-LAST:event_jButton16ActionPerformed
