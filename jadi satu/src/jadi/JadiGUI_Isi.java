@@ -1249,37 +1249,42 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           
           if(dinding_bersih.isSelected()){
                 lan.setBersihdinding(dinding_bersih.getText());
-                
+                ana.setKdinding("(Sesuai)");
           }else if(dinding_kotor.isSelected()){
                 lan.setBersihdinding(dinding_kotor.getText());
-                
+                ana.setKdinding("(Tidak Sesuai)");
           }
           
           if(atap_bersih.isSelected()){
                 lan.setBersihatap(atap_bersih.getText());
-                
+                ana.setKatap("(Sesuai)");
           }else if(atap_kotor.isSelected()){
                 lan.setBersihatap(atap_kotor.getText());
-                
+                ana.setKatap("(Tidak Sesuai)");
           }
           
           if(pintu_bersih.isSelected()){
                 lan.setBersihpintu(pintu_bersih.getText());
-                
+                ana.setKpintu("(Sesuai)");
           }else if(pintu_kotor.isSelected()){
                 lan.setBersihpintu(pintu_kotor.getText());
-                
+                ana.setKpintu("(Tidak Sesuai)");
           }
           
           if(jendela_bersih.isSelected()){
                 lan.setBersihjendela(jendela_bersih.getText());
-                
+                ana.setKjendela("(Sesuai)");
           }else if(jendela_kotor.isSelected()){
                 lan.setBersihjendela(jendela_kotor.getText());
-                
+                ana.setKjendela("(Sesuai)");
           } 
           
           String sirkulasi=inputudara.getText();
+          if(Integer.parseInt(input_nilai_cahaya.getText())>=250&&Integer.parseInt(input_nilai_cahaya.getText())<=350){
+              ana.setCahaya("(Sesuai)");
+          }else{
+              ana.setCahaya("(Tidak Sesuai)");
+          }
           String cahaya=input_nilai_cahaya.getText();
           String lembab=input_lembab.getText();
           String suhu=input_suh.getText();
