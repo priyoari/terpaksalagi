@@ -87,8 +87,10 @@ public class Login extends javax.swing.JFrame {
                 JadiGUI_Pilihan pilih = new JadiGUI_Pilihan();
                 Login log = new Login();
                 log.setVisible(true);
-                log.jLabel1.setText("Berhasil Login");
+                dispose();
+                //log.jLabel1.setText("Berhasil Login");
                 pilih.setVisible(true);
+                dispose();
             }else{
                 jLabel1.setText("Username dan Password anda salah");
             }
