@@ -1280,12 +1280,17 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           } 
           
           String sirkulasi=inputudara.getText();
+          if(inputudara.equals("lancar")){
+              ana.setUdara("(Sesuai)");
+          }else{
+              ana.setUdara("(Tidak Sesuai)");
+          }
+          String cahaya=input_nilai_cahaya.getText();
           if(Integer.parseInt(input_nilai_cahaya.getText())>=250&&Integer.parseInt(input_nilai_cahaya.getText())<=350){
               ana.setCahaya("(Sesuai)");
           }else{
               ana.setCahaya("(Tidak Sesuai)");
           }
-          String cahaya=input_nilai_cahaya.getText();
           String lembab=input_lembab.getText();
           String suhu=input_suh.getText();
           String bisingnya = null;
@@ -1373,8 +1378,8 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             p.setString(4, lan.getBersihatap());
             p.setString(5, lan.getBersihpintu());
             p.setString(6, lan.getBersihjendela());
-            p.setString(7, sirkulasi);
-            p.setString(8, cahaya);
+            p.setString(7, sirkulasi+ana.getUdara());
+            p.setString(8, cahaya+ana.getCahaya());
             p.setString(9, lembab);
             p.setString(10, suhu);
             p.setString(11, bisingnya);
