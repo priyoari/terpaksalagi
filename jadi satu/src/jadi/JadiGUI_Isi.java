@@ -1563,7 +1563,36 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        String nm_ruang=inputnama_ruang.getText();
+        String lokasi=(String)jComboBox1.getSelectedItem().toString();
+        String fakultas=jComboBox2.getSelectedItem().toString();
+        String jurusan=input_jurusan.getText();
+        String p=input_p.getText();
+        String l=input_l.getText();
+        String kursi=input_kursi.getText();
+        String pintu=j_pintu.getText();
+        String jendela=j_jendela.getText();
         
+         try{
+             Connection c=Koneksinya_ruang.getKonksi();
+             String sql="INSERT INTO IDENTITAS VALUES(?,?,?,?,?,?,?,?,?)";
+             PreparedStatement pre=c.prepareStatement(sql);
+             pre.setString(1, nm_ruang);
+             pre.setString(2, lokasi);
+             pre.setString(3, fakultas);
+             pre.setString(4, jurusan);
+             pre.setString(5, p);
+             pre.setString(6, l);
+             pre.setString(7, kursi);
+             pre.setString(8, pintu);
+             pre.setString(9, jendela);
+             pre.executeUpdate();
+             pre.close();
+             JOptionPane.showMessageDialog(this, "data di save");
+         }catch(SQLException e){
+             System.out.println("");
+            JOptionPane.showMessageDialog(this, "ada yang error saat isi data"+"/n"+e);
+         }    
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
