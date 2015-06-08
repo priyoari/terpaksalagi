@@ -1276,7 +1276,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 ana.setKjendela("(Sesuai)");
           }else if(jendela_kotor.isSelected()){
                 lan.setBersihjendela(jendela_kotor.getText());
-                ana.setKjendela("(Sesuai)");
+                ana.setKjendela("(Tidak Sesuai)");
           } 
           
           String sirkulasi=inputudara.getText();
