@@ -231,15 +231,15 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jTextField5" min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="input_p" min="-2" pref="50" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField7" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <Component id="jTextField6" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <Component id="jTextField9" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <Component id="jTextField8" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="input_kursi" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="input_l" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="j_pintu" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="j_jendela" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -259,27 +259,27 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_p" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_l" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="input_kursi" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="j_pintu" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="j_jendela" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="183" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -317,15 +317,15 @@
                 <Property name="text" type="java.lang.String" value="Jumlah jendela"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="input_p">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="input_l">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="input_kursi">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="j_jendela">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="j_pintu">
             </Component>
             <Component class="javax.swing.JButton" name="jButton7">
               <Properties>
@@ -336,6 +336,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Simpan &amp; Lanjut"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

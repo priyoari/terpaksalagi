@@ -178,11 +178,11 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        input_p = new javax.swing.JTextField();
+        input_l = new javax.swing.JTextField();
+        input_kursi = new javax.swing.JTextField();
+        j_jendela = new javax.swing.JTextField();
+        j_pintu = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -393,6 +393,11 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         jButton7.setText("Kembali");
 
         jButton8.setText("Simpan & Lanjut");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -417,14 +422,14 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(input_p, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(28, 28, 28)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(input_kursi, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(input_l, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(j_pintu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(j_jendela, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addComponent(jLabel13))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -435,23 +440,23 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(input_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(input_l, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(input_kursi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(j_pintu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(j_jendela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
@@ -1446,28 +1451,29 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             Connection c=Koneksinya_ruang.getKonksi();
             String sql="UPDATE LINGKUNGAN SET KONDISI_LANTAI=?,KONDISI_DINDING=?,KONDISI_ATAP=?,"
                     + "KONDISI_PINTU=?,KONDISI_JENDELA=?,SIRKULASI=?,NILAI_CAHAYA=?,TINGKAT_LEMBAB=?,"
-                   + "SUHU=?,BISING=?,BAU=?,BOCOR=?,RUSAK=?,AUS=?,KOKOH=?,KUNCI_ADA=? WHERE NAMA_RUANG?";
+                   + "SUHU=?,BISING=?,BAU=?,BOCOR=?,RUSAK=?,AUS=?,KOKOH=?,KUNCI_ADA=? WHERE NAMA_RUANG=?";
             PreparedStatement p=c.prepareStatement(sql);
-            p.setString(1, lan.getNamaRuang());
+           // p.setString(1, lan.getNamaRuang());
 //            p.setString(2,lan.getProgramStudi());
 //            p.setString(3, fakultas);
-            p.setString(2, lan.getBersihlantai());
-            p.setString(3, lan.getBersihdinding());
-            p.setString(4, lan.getBersihatap());
-            p.setString(5, lan.getBersihpintu());
-            p.setString(6, lan.getBersihjendela());
-            p.setString(7, cahaya);
-            p.setString(8, sirkulasi);
-            p.setString(9, lembab);
-            p.setString(10, suhu);
-            p.setString(11, bisingnya);
-            p.setString(12, baunya);
-            p.setString(13, bocornya);
-            p.setString(14, rusaknya);
-            p.setString(15, ausnya);
-            p.setString(16, kokohnya);
-            p.setString(17, kuncinya);
-            //p.setString(17, lan.getNamaRuang());
+            p.setString(1, lan.getBersihlantai());
+            p.setString(2, lan.getBersihdinding());
+            p.setString(3, lan.getBersihatap());
+            p.setString(4, lan.getBersihpintu());
+            p.setString(5, lan.getBersihjendela());
+            p.setString(6, cahaya);
+            p.setString(7, sirkulasi);
+            p.setString(8, lembab);
+            p.setString(9, suhu);
+            p.setString(10, bisingnya);
+            p.setString(11, baunya);
+            p.setString(12, bocornya);
+            p.setString(13, rusaknya);
+            p.setString(14, ausnya);
+            p.setString(15, kokohnya);
+            p.setString(16, kuncinya);
+            p.setString(17, lan.getNamaRuang());
+            JOptionPane.showMessageDialog(this, "berhasil update");
             p.executeUpdate();
             p.close();
           }
@@ -1476,6 +1482,11 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           }
           
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1548,8 +1559,11 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JRadioButton ini_gakbising;
     private javax.swing.JRadioButton ini_gakbocor;
     private javax.swing.JTextField input_jurusan;
+    private javax.swing.JTextField input_kursi;
+    private javax.swing.JTextField input_l;
     private javax.swing.JTextField input_lembab;
     private javax.swing.JTextField input_nilai_cahaya;
+    private javax.swing.JTextField input_p;
     private javax.swing.JTextField input_suh;
     private javax.swing.JTextField inputnama_ruang;
     private javax.swing.JTextField inputudara;
@@ -1631,11 +1645,8 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField j_jendela;
+    private javax.swing.JTextField j_pintu;
     private javax.swing.JRadioButton jendela_bersih;
     private javax.swing.JRadioButton jendela_kotor;
     private javax.swing.JRadioButton kokoh_1;
