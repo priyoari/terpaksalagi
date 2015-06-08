@@ -5,12 +5,44 @@ package jadi;
  *
  * @author Priyo
  */
+import java.io.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 public class JadiGUI_LihatEdit extends javax.swing.JFrame {
 
     /** Creates new form JadiGUI2 */
-    public JadiGUI_LihatEdit() {
+    private DefaultTableModel model;
+    public JadiGUI_LihatEdit() throws SQLException {
         initComponents();
         this.setLocationRelativeTo(this);
+        model=new DefaultTableModel();
+        jTable1.setModel(model);
+        model.addColumn("nama_ruang");
+        model.addColumn("kondisi_lantai");
+        model.addColumn("dinding");
+        model.addColumn("atap");
+        model.addColumn("pintu");
+        model.addColumn("jendela");
+        model.addColumn("sirkulasi");
+        model.addColumn("cahaya");
+        model.addColumn("lembab");
+        model.addColumn("suhu");
+        model.addColumn("bising");
+        model.addColumn("bau");
+        model.addColumn("bocor");
+        model.addColumn("rusak");
+        model.addColumn("aus");
+        model.addColumn("kokoh");
+        model.addColumn("kunci");
+        
+        baca();
     }
 
     /** This method is called from within the constructor to
@@ -37,8 +69,13 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         jScrollBar1 = new javax.swing.JScrollBar();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -68,6 +105,10 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -75,12 +116,18 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jButton1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel5))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addComponent(jButton1)))
+                        .addGap(0, 546, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -89,6 +136,8 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
+                .addGap(2, 2, 2)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -111,7 +160,7 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(0, 278, Short.MAX_VALUE))
+                        .addGap(0, 635, Short.MAX_VALUE))
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -134,22 +183,41 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 107, Short.MAX_VALUE))
+                        .addGap(0, 210, Short.MAX_VALUE))
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("GKB 1", jPanel2);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 346, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("GKB 2", jPanel3);
@@ -158,14 +226,21 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 346, Short.MAX_VALUE)
+            .addGap(0, 449, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("GKB 3", jPanel4);
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,12 +250,18 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(57, 57, 57))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
                 .addContainerGap())
         );
 
@@ -206,9 +287,20 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             this.setVisible(false);
-            
-// TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+//        try {
+//            this.setVisible(false);
+//            baca();
+//            // TODO add your handling code here:
+//        } catch (SQLException ex) {
+//            Logger.getLogger(JadiGUI_LihatEdit.class.getName()).log(Level.SEVERE, null, ex);
+//            JOptionPane.showMessageDialog(this, "gagal tampil data");
+//        }
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,13 +333,56 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JadiGUI_LihatEdit().setVisible(true);
+                try {
+                    new JadiGUI_LihatEdit().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(JadiGUI_LihatEdit.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
-
+    
+    void baca() throws SQLException {
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+        try{
+            Connection c=Koneksinya_ruang.getKonksi();
+            Statement s=c.createStatement();
+            
+            String sql="SELECT * FROM LINGKUNGAN";
+            ResultSet r=s.executeQuery(sql);
+            
+            while(r.next()){
+                Object[] ob=new Object[17];
+                ob[0]=r.getString("nama_ruang");
+                ob[1]=r.getString("kondisi_lantai");
+                ob[2]=r.getString("kondisi_dinding");
+                ob[3]=r.getString("kondisi_atap");
+                ob[4]=r.getString("kondisi_pintu");
+                ob[5]=r.getString("kondisi_jendela");
+                ob[6]=r.getString("sirkulasi");
+                ob[7]=r.getString("nilai_cahaya");
+                ob[8]=r.getString("tingkat_lembab");
+                ob[9]=r.getString("suhu");
+                ob[10]=r.getString("bising");
+                ob[11]=r.getString("bau");
+                ob[12]=r.getString("bocor");
+                ob[13]=r.getString("rusak");
+                ob[14]=r.getString("aus");
+                ob[15]=r.getString("kokoh");
+                ob[16]=r.getString("kunci_ada");
+                model.addRow(ob);
+            }
+            r.close();
+            s.close();
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(this, "gagal tampil ke table"+e);
+        }
+    
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -260,8 +395,12 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables

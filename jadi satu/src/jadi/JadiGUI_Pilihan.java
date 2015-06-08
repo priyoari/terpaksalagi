@@ -1,6 +1,10 @@
 
 package jadi;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Priyo
@@ -84,7 +88,12 @@ public class JadiGUI_Pilihan extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JadiGUI_LihatEdit lihat = new JadiGUI_LihatEdit();
+        JadiGUI_LihatEdit lihat = null;
+        try {
+            lihat = new JadiGUI_LihatEdit();
+        } catch (SQLException ex) {
+            Logger.getLogger(JadiGUI_Pilihan.class.getName()).log(Level.SEVERE, null, ex);
+        }
         lihat.setVisible(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed

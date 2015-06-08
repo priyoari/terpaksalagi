@@ -145,6 +145,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
@@ -152,6 +155,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="inputnama_ruang">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputnama_ruangActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -186,6 +192,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="input_jurusan">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="input_jurusanActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -272,7 +281,7 @@
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="179" max="32767" attributes="0"/>
+                      <EmptySpace pref="183" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -544,7 +553,7 @@
                           <Component id="RD_Login2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox10" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1181,19 +1190,19 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton33" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_bau" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_bocor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ada_rusak" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sudah_aus" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_bising" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jRadioButton26" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton34" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_gakbising" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_gakbau" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="durung_aus" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ini_gakbocor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="gak_ada_rusak" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="207" max="32767" attributes="0"/>
                           </Group>
@@ -1209,8 +1218,8 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jRadioButton25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ini_bising" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ini_gakbising" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1227,23 +1236,23 @@
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jRadioButton29" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ini_bocor" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton31" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ada_rusak" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton33" min="-2" max="-2" attributes="0"/>
+                                      <Component id="sudah_aus" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jRadioButton27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ini_gakbau" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="ini_bau" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton30" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ini_gakbocor" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton32" min="-2" max="-2" attributes="0"/>
+                                      <Component id="gak_ada_rusak" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton34" min="-2" max="-2" attributes="0"/>
+                                      <Component id="durung_aus" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1256,55 +1265,55 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton25">
+            <Component class="javax.swing.JRadioButton" name="ini_bising">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bising"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton26">
+            <Component class="javax.swing.JRadioButton" name="ini_gakbising">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak bising"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton27">
+            <Component class="javax.swing.JRadioButton" name="ini_gakbau">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak bau"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton27ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ini_gakbauActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton28">
+            <Component class="javax.swing.JRadioButton" name="ini_bau">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ada bau"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton29">
+            <Component class="javax.swing.JRadioButton" name="ini_bocor">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ada kebocoran"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton30">
+            <Component class="javax.swing.JRadioButton" name="ini_gakbocor">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak bocor"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton31">
+            <Component class="javax.swing.JRadioButton" name="ada_rusak">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ada kerusakan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton32">
+            <Component class="javax.swing.JRadioButton" name="gak_ada_rusak">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak rusak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton33">
+            <Component class="javax.swing.JRadioButton" name="sudah_aus">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ada keausan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton34">
+            <Component class="javax.swing.JRadioButton" name="durung_aus">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tidak aus"/>
               </Properties>
@@ -1404,7 +1413,7 @@
                           <Component id="RD_aman" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tidak" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                      <EmptySpace pref="236" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton15" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton16" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1468,8 +1477,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton15">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Kembali"/>
+                <Property name="text" type="java.lang.String" value="Update"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton16">
               <Properties>

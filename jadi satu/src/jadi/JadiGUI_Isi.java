@@ -15,18 +15,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 /**
  *
  * @author Priyo
  */
-public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kelas{
+public class JadiGUI_Isi extends javax.swing.JFrame{
 
     /**
      * Creates new form JadiGUI3
      */
     //JComboBox combo=new JComboBox();
+    //JTextField jurusan;
     ButtonGroup lantai = new ButtonGroup();
     ButtonGroup kontak = new ButtonGroup();
     ButtonGroup lcd = new ButtonGroup();
@@ -41,8 +43,14 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     ButtonGroup aus = new ButtonGroup();
     ButtonGroup kokoh = new ButtonGroup();
     ButtonGroup kunci = new ButtonGroup();
-    private ActionEvent ItemEvent;
+   
+    
+   // private ActionEvent ItemEvent;
+    kenalan l=new kenalan();
+    //Lingkungan ling=new Lingkungan();
     public JadiGUI_Isi() {
+       kenalan l=new kenalan();
+        //l.setNamaRuang(null);= input_jurusan;
         
         initComponents();
         this.setLocationRelativeTo(this);
@@ -96,24 +104,24 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         jendela.add(jendela_kotor);
         
         ButtonGroup bising = new ButtonGroup();
-        bising.add(jRadioButton25);
-        bising.add(jRadioButton26);
+        bising.add(ini_bising);
+        bising.add(ini_gakbising);
         
         ButtonGroup bau = new ButtonGroup();
-        bau.add(jRadioButton28);
-        bau.add(jRadioButton27);
+        bau.add(ini_bau);
+        bau.add(ini_gakbau);
         
         ButtonGroup bocor = new ButtonGroup();
-        bocor.add(jRadioButton29);
-        bocor.add(jRadioButton30);
+        bocor.add(ini_bocor);
+        bocor.add(ini_gakbocor);
         
         ButtonGroup rusak = new ButtonGroup();
-        rusak.add(jRadioButton31);
-        rusak.add(jRadioButton32);
+        rusak.add(ada_rusak);
+        rusak.add(gak_ada_rusak);
         
         ButtonGroup aus = new ButtonGroup();
-        aus.add(jRadioButton33);
-        aus.add(jRadioButton34);
+        aus.add(sudah_aus);
+        aus.add(durung_aus);
         
         ButtonGroup kokoh = new ButtonGroup();
         kokoh.add(kokoh_1);
@@ -126,7 +134,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         ButtonGroup aman = new ButtonGroup();
         aman.add(RD_aman);
         aman.add(tidak);
-        
+         //Lingkungan ling=new Lingkungan();
         
         
        // combo=new JCombbox(jComboBox3);
@@ -253,16 +261,16 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jRadioButton25 = new javax.swing.JRadioButton();
-        jRadioButton26 = new javax.swing.JRadioButton();
-        jRadioButton27 = new javax.swing.JRadioButton();
-        jRadioButton28 = new javax.swing.JRadioButton();
-        jRadioButton29 = new javax.swing.JRadioButton();
-        jRadioButton30 = new javax.swing.JRadioButton();
-        jRadioButton31 = new javax.swing.JRadioButton();
-        jRadioButton32 = new javax.swing.JRadioButton();
-        jRadioButton33 = new javax.swing.JRadioButton();
-        jRadioButton34 = new javax.swing.JRadioButton();
+        ini_bising = new javax.swing.JRadioButton();
+        ini_gakbising = new javax.swing.JRadioButton();
+        ini_gakbau = new javax.swing.JRadioButton();
+        ini_bau = new javax.swing.JRadioButton();
+        ini_bocor = new javax.swing.JRadioButton();
+        ini_gakbocor = new javax.swing.JRadioButton();
+        ada_rusak = new javax.swing.JRadioButton();
+        gak_ada_rusak = new javax.swing.JRadioButton();
+        sudah_aus = new javax.swing.JRadioButton();
+        durung_aus = new javax.swing.JRadioButton();
         jButton13 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -293,8 +301,19 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         jLabel1.setText("Lokasi Ruang");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "GKB 1", "GKB 2", "GKB 3" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Nama Ruang");
+
+        inputnama_ruang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputnama_ruangActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Fakultas / Jurusan");
 
@@ -306,6 +325,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         });
 
         jButton1.setText("Kembali");
+
+        input_jurusan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                input_jurusanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -427,7 +452,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton7))
@@ -695,7 +720,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                     .addComponent(RD_Login1)
                     .addComponent(RD_Login2)
                     .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton5))
@@ -898,30 +923,30 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
 
         jTabbedPane1.addTab("Kebersihan Ruang", jPanel5);
 
-        jRadioButton25.setText("Bising");
+        ini_bising.setText("Bising");
 
-        jRadioButton26.setText("Tidak bising");
+        ini_gakbising.setText("Tidak bising");
 
-        jRadioButton27.setText("Tidak bau");
-        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
+        ini_gakbau.setText("Tidak bau");
+        ini_gakbau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton27ActionPerformed(evt);
+                ini_gakbauActionPerformed(evt);
             }
         });
 
-        jRadioButton28.setText("Ada bau");
+        ini_bau.setText("Ada bau");
 
-        jRadioButton29.setText("Ada kebocoran");
+        ini_bocor.setText("Ada kebocoran");
 
-        jRadioButton30.setText("Tidak bocor");
+        ini_gakbocor.setText("Tidak bocor");
 
-        jRadioButton31.setText("Ada kerusakan");
+        ada_rusak.setText("Ada kerusakan");
 
-        jRadioButton32.setText("Tidak rusak");
+        gak_ada_rusak.setText("Tidak rusak");
 
-        jRadioButton33.setText("Ada keausan");
+        sudah_aus.setText("Ada keausan");
 
-        jRadioButton34.setText("Tidak aus");
+        durung_aus.setText("Tidak aus");
 
         jButton13.setText("Kembali");
 
@@ -955,18 +980,18 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                             .addComponent(jLabel32))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton28)
-                            .addComponent(jRadioButton29)
-                            .addComponent(jRadioButton31)
-                            .addComponent(jRadioButton33)
-                            .addComponent(jRadioButton25))
+                            .addComponent(ini_bau)
+                            .addComponent(ini_bocor)
+                            .addComponent(ada_rusak)
+                            .addComponent(sudah_aus)
+                            .addComponent(ini_bising))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton26)
-                            .addComponent(jRadioButton27)
-                            .addComponent(jRadioButton34)
-                            .addComponent(jRadioButton30)
-                            .addComponent(jRadioButton32))
+                            .addComponent(ini_gakbising)
+                            .addComponent(ini_gakbau)
+                            .addComponent(durung_aus)
+                            .addComponent(ini_gakbocor)
+                            .addComponent(gak_ada_rusak))
                         .addContainerGap(207, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
@@ -977,8 +1002,8 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jRadioButton25)
-                                .addComponent(jRadioButton26))
+                                .addComponent(ini_bising)
+                                .addComponent(ini_gakbising))
                             .addComponent(jLabel21))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel23)
@@ -992,21 +1017,21 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                         .addGap(26, 26, 26)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(jRadioButton29)
+                                .addComponent(ini_bocor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton31)
+                                .addComponent(ada_rusak)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton33))
+                                .addComponent(sudah_aus))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jRadioButton27)
-                                    .addComponent(jRadioButton28))
+                                    .addComponent(ini_gakbau)
+                                    .addComponent(ini_bau))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton30)
+                                .addComponent(ini_gakbocor)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton32)
+                                .addComponent(gak_ada_rusak)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton34)))))
+                                .addComponent(durung_aus)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                 .addComponent(jButton13)
                 .addContainerGap())
@@ -1042,7 +1067,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
 
         kokoh_2.setText("Tidak");
 
-        jButton15.setText("Kembali");
+        jButton15.setText("Update");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         jButton16.setText("Simpan untuk kondisi lingkungan");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -1097,7 +1127,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
                     .addComponent(jLabel35)
                     .addComponent(RD_aman)
                     .addComponent(tidak))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton15)
                     .addComponent(jButton16))
@@ -1126,9 +1156,9 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
+    private void ini_gakbauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ini_gakbauActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
+    }//GEN-LAST:event_ini_gakbauActionPerformed
 
     private void RD_kontak1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RD_kontak1ActionPerformed
         
@@ -1146,7 +1176,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     }//GEN-LAST:event_RD_LCD1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-            isi();
+           // isi();
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -1165,9 +1195,287 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     }//GEN-LAST:event_RD_amanActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-            isi();
-        // TODO add your handling code here:
+          kenalan lan=new kenalan();
+          
+          lan.setNamaRuang(inputnama_ruang.getText());
+          lan.setProgramStudi(input_jurusan.getText());
+          String fakultas=(String)jComboBox2.getSelectedItem();
+         // String k_lantai;
+          if(lantai_bersih.isSelected()){
+             lan.setBersihlantai(lantai_bersih.getText());
+          }else if(lantai_kotor.isSelected()){
+              lan.setBersihlantai(lantai_kotor.getText());
+          }
+          
+          if(dinding_bersih.isSelected()){
+              lan.setBersihdinding(dinding_bersih.getText());
+          }else if(dinding_kotor.isSelected()){
+              lan.setBersihdinding(dinding_kotor.getText());
+          }
+          
+          if(atap_bersih.isSelected()){
+              lan.setBersihatap(atap_bersih.getText());
+          }else if(atap_kotor.isSelected()){
+              lan.setBersihatap(atap_kotor.getText());
+          }
+          
+          if(pintu_bersih.isSelected()){
+              lan.setBersihpintu(pintu_bersih.getText());
+          }else if(pintu_kotor.isSelected()){
+              lan.setBersihpintu(pintu_kotor.getText());
+          }
+          
+          if(jendela_bersih.isSelected()){
+              lan.setBersihjendela(jendela_bersih.getText());
+          }else if(jendela_kotor.isSelected()){
+              lan.setBersihjendela(jendela_kotor.getText());
+          } 
+          
+          
+          String cahaya=input_nilai_cahaya.getText();
+          String sirkulasi=input_nilai_cahaya.getText();
+          String lembab=input_lembab.getText();
+          String suhu=input_suh.getText();
+          
+          String bisingnya = null;
+          if(ini_bising.isSelected()){
+              bisingnya=ini_bising.getText();
+          }else if(ini_gakbising.isSelected()){
+              bisingnya=ini_gakbising.getText();
+          }
+          
+          String baunya = null;
+          if(ini_bau.isSelected()){
+              baunya=ini_bau.getText();
+          }else if(ini_gakbau.isSelected()){
+            baunya=ini_gakbau.getText();
+          }
+          
+          String bocornya = null;
+          if(ini_bocor.isSelected()){
+              bocornya=ini_bocor.getText();
+          }else if(ini_gakbocor.isSelected()){
+              bocornya=ini_gakbocor.getText();
+          }
+          
+          String rusaknya = null;
+          if(ada_rusak.isSelected()){
+              rusaknya=ada_rusak.getText();
+          }else if(gak_ada_rusak.isSelected()){
+              rusaknya=gak_ada_rusak.getText();
+          }
+          
+          String ausnya = null;
+          if(sudah_aus.isSelected()){
+              ausnya=sudah_aus.getText();
+          }else if(durung_aus.isSelected()){
+              ausnya=durung_aus.getText();
+          }
+          
+          String kokohnya = null;
+          if(kokoh_1.isSelected()){
+              kokohnya=kokoh_1.getText();
+          }else if(kokoh_2.isSelected()){
+              kokohnya=kokoh_2.getText();
+          }
+          
+          String kuncinya = null;
+          if(kunciada.isSelected()){
+              kuncinya=kunciada.getText();
+          }else if(kunchilang.isSelected()){
+            kuncinya=kunchilang.getText();
+          }
+          
+          String amannya;
+          if(RD_aman.isSelected()){
+              amannya=RD_aman.getText();
+          }else if(tidak.isSelected()){
+              amannya=tidak.getText();
+          }
+          
+          
+          
+          try{
+            Connection c=Koneksinya_ruang.getKonksi();
+            String sql="INSERT INTO LINGKUNGAN VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            PreparedStatement p=c.prepareStatement(sql);
+            p.setString(1, lan.getNamaRuang());
+//            p.setString(2,lan.getProgramStudi());
+//            p.setString(3, fakultas);
+            p.setString(2, lan.getBersihlantai());
+            p.setString(3, lan.getBersihdinding());
+            p.setString(4, lan.getBersihatap());
+            p.setString(5, lan.getBersihpintu());
+            p.setString(6, lan.getBersihjendela());
+            p.setString(7, cahaya);
+            p.setString(8, sirkulasi);
+            p.setString(9, lembab);
+            p.setString(10, suhu);
+            p.setString(11, bisingnya);
+            p.setString(12, baunya);
+            p.setString(13, bocornya);
+            p.setString(14, rusaknya);
+            p.setString(15, ausnya);
+            p.setString(16, kokohnya);
+            p.setString(17, kuncinya);
+            JOptionPane.showMessageDialog(this, "data berhasil di isi");
+            p.executeUpdate();
+            p.close();
+          }
+          catch(SQLException t){
+              JOptionPane.showMessageDialog(this, "ada yang error saat isi data");
+          }
+          
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void input_jurusanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_jurusanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_input_jurusanActionPerformed
+
+    private void inputnama_ruangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputnama_ruangActionPerformed
+       
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputnama_ruangActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        kenalan lan=new kenalan();
+          lan.setNamaRuang(inputnama_ruang.getText());
+          lan.setProgramStudi(input_jurusan.getText());
+          String fakultas=(String)jComboBox2.getSelectedItem();
+         // String k_lantai;
+          if(lantai_bersih.isSelected()){
+             lan.setBersihlantai(lantai_bersih.getText());
+          }else if(lantai_kotor.isSelected()){
+              lan.setBersihlantai(lantai_kotor.getText());
+          }
+          
+          if(dinding_bersih.isSelected()){
+              lan.setBersihdinding(dinding_bersih.getText());
+          }else if(dinding_kotor.isSelected()){
+              lan.setBersihdinding(dinding_kotor.getText());
+          }
+          
+          if(atap_bersih.isSelected()){
+              lan.setBersihatap(atap_bersih.getText());
+          }else if(atap_kotor.isSelected()){
+              lan.setBersihatap(atap_kotor.getText());
+          }
+          
+          if(pintu_bersih.isSelected()){
+              lan.setBersihpintu(pintu_bersih.getText());
+          }else if(pintu_kotor.isSelected()){
+              lan.setBersihpintu(pintu_kotor.getText());
+          }
+          
+          if(jendela_bersih.isSelected()){
+              lan.setBersihjendela(jendela_bersih.getText());
+          }else if(jendela_kotor.isSelected()){
+              lan.setBersihjendela(jendela_kotor.getText());
+          } 
+          
+          
+          String cahaya=input_nilai_cahaya.getText();
+          String sirkulasi=input_nilai_cahaya.getText();
+          String lembab=input_lembab.getText();
+          String suhu=input_suh.getText();
+          
+          String bisingnya = null;
+          if(ini_bising.isSelected()){
+              bisingnya=ini_bising.getText();
+          }else if(ini_gakbising.isSelected()){
+              bisingnya=ini_gakbising.getText();
+          }
+          
+          String baunya = null;
+          if(ini_bau.isSelected()){
+              baunya=ini_bau.getText();
+          }else if(ini_gakbau.isSelected()){
+            baunya=ini_gakbau.getText();
+          }
+          
+          String bocornya = null;
+          if(ini_bocor.isSelected()){
+              bocornya=ini_bocor.getText();
+          }else if(ini_gakbocor.isSelected()){
+              bocornya=ini_gakbocor.getText();
+          }
+          
+          String rusaknya = null;
+          if(ada_rusak.isSelected()){
+              rusaknya=ada_rusak.getText();
+          }else if(gak_ada_rusak.isSelected()){
+              rusaknya=gak_ada_rusak.getText();
+          }
+          
+          String ausnya = null;
+          if(sudah_aus.isSelected()){
+              ausnya=sudah_aus.getText();
+          }else if(durung_aus.isSelected()){
+              ausnya=durung_aus.getText();
+          }
+          
+          String kokohnya = null;
+          if(kokoh_1.isSelected()){
+              kokohnya=kokoh_1.getText();
+          }else if(kokoh_2.isSelected()){
+              kokohnya=kokoh_2.getText();
+          }
+          
+          String kuncinya = null;
+          if(kunciada.isSelected()){
+              kuncinya=kunciada.getText();
+          }else if(kunchilang.isSelected()){
+            kuncinya=kunchilang.getText();
+          }
+          
+          String amannya;
+          if(RD_aman.isSelected()){
+              amannya=RD_aman.getText();
+          }else if(tidak.isSelected()){
+              amannya=tidak.getText();
+          }
+          
+          
+          
+          try{
+            Connection c=Koneksinya_ruang.getKonksi();
+            String sql="UPDATE LINGKUNGAN SET KONDISI_LANTAI=?,KONDISI_DINDING=?,KONDISI_ATAP=?,"
+                    + "KONDISI_PINTU=?,KONDISI_JENDELA=?,SIRKULASI=?,NILAI_CAHAYA=?,TINGKAT_LEMBAB=?,"
+                   + "SUHU=?,BISING=?,BAU=?,BOCOR=?,RUSAK=?,AUS=?,KOKOH=?,KUNCI_ADA=? WHERE NAMA_RUANG?";
+            PreparedStatement p=c.prepareStatement(sql);
+            p.setString(1, lan.getNamaRuang());
+//            p.setString(2,lan.getProgramStudi());
+//            p.setString(3, fakultas);
+            p.setString(2, lan.getBersihlantai());
+            p.setString(3, lan.getBersihdinding());
+            p.setString(4, lan.getBersihatap());
+            p.setString(5, lan.getBersihpintu());
+            p.setString(6, lan.getBersihjendela());
+            p.setString(7, cahaya);
+            p.setString(8, sirkulasi);
+            p.setString(9, lembab);
+            p.setString(10, suhu);
+            p.setString(11, bisingnya);
+            p.setString(12, baunya);
+            p.setString(13, bocornya);
+            p.setString(14, rusaknya);
+            p.setString(15, ausnya);
+            p.setString(16, kokohnya);
+            p.setString(17, kuncinya);
+            //p.setString(17, lan.getNamaRuang());
+            p.executeUpdate();
+            p.close();
+          }
+          catch(SQLException t){
+              JOptionPane.showMessageDialog(this, "ada yang error saat ubah data"+t);
+          }
+          
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1223,6 +1531,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     private javax.swing.JRadioButton RD_kontak2;
     private javax.swing.JRadioButton RD_lampu1;
     private javax.swing.JRadioButton RD_lampu2;
+    private javax.swing.JRadioButton ada_rusak;
     private javax.swing.JRadioButton atap_bersih;
     private javax.swing.JRadioButton atap_kotor;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -1230,6 +1539,14 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JRadioButton dinding_bersih;
     private javax.swing.JRadioButton dinding_kotor;
+    private javax.swing.JRadioButton durung_aus;
+    private javax.swing.JRadioButton gak_ada_rusak;
+    private javax.swing.JRadioButton ini_bau;
+    private javax.swing.JRadioButton ini_bising;
+    private javax.swing.JRadioButton ini_bocor;
+    private javax.swing.JRadioButton ini_gakbau;
+    private javax.swing.JRadioButton ini_gakbising;
+    private javax.swing.JRadioButton ini_gakbocor;
     private javax.swing.JTextField input_jurusan;
     private javax.swing.JTextField input_lembab;
     private javax.swing.JTextField input_nilai_cahaya;
@@ -1306,16 +1623,6 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JRadioButton jRadioButton25;
-    private javax.swing.JRadioButton jRadioButton26;
-    private javax.swing.JRadioButton jRadioButton27;
-    private javax.swing.JRadioButton jRadioButton28;
-    private javax.swing.JRadioButton jRadioButton29;
-    private javax.swing.JRadioButton jRadioButton30;
-    private javax.swing.JRadioButton jRadioButton31;
-    private javax.swing.JRadioButton jRadioButton32;
-    private javax.swing.JRadioButton jRadioButton33;
-    private javax.swing.JRadioButton jRadioButton34;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
@@ -1339,78 +1646,79 @@ public class JadiGUI_Isi extends javax.swing.JFrame implements Spesialisnya_Kela
     private javax.swing.JRadioButton lantai_kotor;
     private javax.swing.JRadioButton pintu_bersih;
     private javax.swing.JRadioButton pintu_kotor;
+    private javax.swing.JRadioButton sudah_aus;
     private javax.swing.JRadioButton tidak;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void isi() {
-       try{
-           FileWriter tulis=new FileWriter("lingkungankelas.txt");
-           File file=new File("lingkungankelas.txt");
-           if(file.exists()){
-               JOptionPane.showMessageDialog(this, "data telah di save");
-           }else{
-               JOptionPane.showMessageDialog(this, "file hilang");
-           }
-           
-           
-           if(jComboBox2.getSelectedItem().toString()!=null){
-          
-             tulis.write(jComboBox2.getSelectedItem().toString());
-          
-         }
-           
-           
-           
-           tulis.write(input_jurusan.getText());
-           
-           
-           if(lantai_bersih.isSelected()){
-              tulis.write(lantai_bersih.getText());
-           }else if(lantai_kotor.isSelected()){
-               tulis.write(lantai_kotor.getText());
-           }
-           
-           if(dinding_bersih.isSelected()){
-               tulis.write(pintu_bersih.getText());
-           }else if(dinding_kotor.isSelected()){
-               tulis.write(pintu_kotor.getText());
-           }
-           
-           if(atap_bersih.isSelected()){
-               tulis.write(atap_bersih.getText());
-           }else if(atap_kotor.isSelected()){
-               tulis.write(atap_kotor.getText());
-           }
-           
-           if(pintu_bersih.isSelected()){
-               tulis.write(pintu_bersih.getText());
-           }else if(pintu_kotor.isSelected()){
-               tulis.write(pintu_kotor.getText());
-           }
-           
-           if(jendela_bersih.isSelected()){
-               tulis.write(jendela_bersih.getText());
-           }else if(jendela_kotor.isSelected()){
-               tulis.write(jendela_kotor.getText());
-           }
-           
-           String jurusan;
-           String fakultas;
-           
-//        
-          
-           String udara=inputudara.getText();
-           tulis.write(udara);
-           
-           String  cahaya=input_nilai_cahaya.getText();
-           tulis.write(cahaya);
-           tulis.close();
-       }catch(IOException t){
-           System.out.println("gagal input data");
-           t.printStackTrace();
-       }
-    }
-
-    
+//    @Override
+//    public void isi() {
+//       try{
+//           FileWriter tulis=new FileWriter("lingkungankelas.txt");
+//           File file=new File("lingkungankelas.txt");
+//           if(file.exists()){
+//               JOptionPane.showMessageDialog(this, "data telah di save");
+//           }else{
+//               JOptionPane.showMessageDialog(this, "file hilang");
+//           }
+//           
+//           
+//           if(jComboBox2.getSelectedItem().toString()!=null){
+//          
+//             tulis.write(jComboBox2.getSelectedItem().toString());
+//          
+//         }
+//           
+//           
+//           
+//           tulis.write(input_jurusan.getText());
+//           
+//           
+//           if(lantai_bersih.isSelected()){
+//              tulis.write(lantai_bersih.getText());
+//           }else if(lantai_kotor.isSelected()){
+//               tulis.write(lantai_kotor.getText());
+//           }
+//           
+//           if(dinding_bersih.isSelected()){
+//               tulis.write(pintu_bersih.getText());
+//           }else if(dinding_kotor.isSelected()){
+//               tulis.write(pintu_kotor.getText());
+//           }
+//           
+//           if(atap_bersih.isSelected()){
+//               tulis.write(atap_bersih.getText());
+//           }else if(atap_kotor.isSelected()){
+//               tulis.write(atap_kotor.getText());
+//           }
+//           
+//           if(pintu_bersih.isSelected()){
+//               tulis.write(pintu_bersih.getText());
+//           }else if(pintu_kotor.isSelected()){
+//               tulis.write(pintu_kotor.getText());
+//           }
+//           
+//           if(jendela_bersih.isSelected()){
+//               tulis.write(jendela_bersih.getText());
+//           }else if(jendela_kotor.isSelected()){
+//               tulis.write(jendela_kotor.getText());
+//           }
+//           
+//           String jurusan;
+//           String fakultas;
+//           
+////        
+//          
+//           String udara=inputudara.getText();
+//           tulis.write(udara);
+//           
+//           String  cahaya=input_nilai_cahaya.getText();
+//           tulis.write(cahaya);
+//           tulis.close();
+//       }catch(IOException t){
+//           System.out.println("gagal input data");
+//           t.printStackTrace();
+//       }
+//    }
+//
+//    
 }
