@@ -23,6 +23,8 @@ import javax.swing.JTextField;
  * @author Priyo
  */
 public class JadiGUI_Isi extends javax.swing.JFrame{
+    JadiGUI_Pilihan pilih = new JadiGUI_Pilihan();
+        
 
     /**
      * Creates new form JadiGUI3
@@ -324,7 +326,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             }
         });
 
-        jButton1.setText("Kembali");
+        jButton1.setText("Batal");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         input_jurusan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,7 +347,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 299, Short.MAX_VALUE)
+                        .addGap(0, 311, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addGap(125, 125, 125))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -390,7 +397,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         jLabel13.setText("Jumlah jendela");
 
-        jButton7.setText("Kembali");
+        jButton7.setText("Batal");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Simpan & Lanjut");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -407,7 +419,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 299, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
                         .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton8))
@@ -487,7 +499,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             }
         });
 
-        jButton5.setText("Kembali");
+        jButton5.setText("Batal");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Simpan & Lanjut");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -734,7 +751,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         jTabbedPane1.addTab("Kondisi Sarana", jPanel3);
 
-        jButton3.setText("Kembali");
+        jButton3.setText("Batal");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Kondisi lantai");
 
@@ -849,7 +871,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         jTabbedPane1.addTab("Lingkungan Ruang", jPanel4);
 
-        jButton11.setText("Kembali");
+        jButton11.setText("Batal");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel36.setText("Sirkulasi udara");
 
@@ -953,7 +980,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         durung_aus.setText("Tidak aus");
 
-        jButton13.setText("Kembali");
+        jButton13.setText("Batal");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("Tingkat kebisingan");
 
@@ -1487,6 +1519,42 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        pilih.setVisible(true);
+        dispose();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
