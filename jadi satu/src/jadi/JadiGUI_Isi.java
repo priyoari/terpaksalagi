@@ -1233,148 +1233,120 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
           kenalan lan=new kenalan();
-          Analisis ana = new Analisis();
-          
+                    
           lan.setNamaRuang(inputnama_ruang.getText());
           lan.setProgramStudi(input_jurusan.getText());
           String fakultas=(String)jComboBox2.getSelectedItem();
          // String k_lantai;
           if(lantai_bersih.isSelected()){
                 lan.setBersihlantai(lantai_bersih.getText());
-                ana.setKlantai("(Sesuai)");
+                
           }else if(lantai_kotor.isSelected()){
                 lan.setBersihlantai(lantai_kotor.getText());
-                ana.setKlantai("(Tidak Sesuai)");
+                
           }
           
           if(dinding_bersih.isSelected()){
                 lan.setBersihdinding(dinding_bersih.getText());
-                ana.setKdinding("(Sesuai)");
+                
           }else if(dinding_kotor.isSelected()){
                 lan.setBersihdinding(dinding_kotor.getText());
-                ana.setKdinding("(Tidak Sesuai)");
+                
           }
           
           if(atap_bersih.isSelected()){
                 lan.setBersihatap(atap_bersih.getText());
-                ana.setKatap("(Sesuai)");
+                
           }else if(atap_kotor.isSelected()){
                 lan.setBersihatap(atap_kotor.getText());
-                ana.setKatap("(Tidak Sesuai)");
+                
           }
           
           if(pintu_bersih.isSelected()){
                 lan.setBersihpintu(pintu_bersih.getText());
-                ana.setKpintu("(Sesuai)");
+                
           }else if(pintu_kotor.isSelected()){
                 lan.setBersihpintu(pintu_kotor.getText());
-                ana.setKpintu("(Tidak Sesuai)");
+                
           }
           
           if(jendela_bersih.isSelected()){
                 lan.setBersihjendela(jendela_bersih.getText());
-                ana.setKjendela("(Sesuai)");
+                
           }else if(jendela_kotor.isSelected()){
                 lan.setBersihjendela(jendela_kotor.getText());
-                ana.setKjendela("(Sesuai)");
+                
           } 
           
           
           String cahaya=input_nilai_cahaya.getText();
-          if(Integer.parseInt(input_nilai_cahaya.getText())>=250&&Integer.parseInt(input_nilai_cahaya.getText())<=350){
-              ana.setCahaya("(Sesuai)");
-          }else{
-              ana.setCahaya("(Tidak Sesuai)");
-          }
           String sirkulasi=inputudara.getText().toLowerCase();
-          if(inputudara.equals("lancar")){
-              ana.setUdara("(Sesuai)");
-          }else{
-              ana.setUdara("(Tidak Sesuai)");
-          }
           String lembab=input_lembab.getText();
-          if(Integer.parseInt(input_lembab.getText())>=70&&Integer.parseInt(input_lembab.getText())<=80){
-              ana.setLembab("(Sesuai)");
-          }else{
-              ana.setLembab("(Tidak Sesuai)");
-          }
           String suhu=input_suh.getText();
-          if(Integer.parseInt(input_suh.getText())>=25&&Integer.parseInt(input_suh.getText())<=35){
-              ana.setSuhu("(Sesuai)");
-          }else{
-              ana.setSuhu("(Tidak Sesuai)");
-          }
-          
           String bisingnya = null;
-          if(ini_bising.isSelected()){
-              bisingnya=ini_bising.getText();
-              ana.setTbising("(Tidak Sesuai)");
-          }else if(ini_gakbising.isSelected()){
-              bisingnya=ini_gakbising.getText();
-              ana.setTbising("(Sesuai)");
-          }
+          
           
           String baunya = null;
           if(ini_bau.isSelected()){
               baunya=ini_bau.getText();
-              ana.setTbau("(Tidak Sesuai)");
+              
           }else if(ini_gakbau.isSelected()){
                 baunya=ini_gakbau.getText();
-                ana.setTbau("(Sesuai)");
+                
           }
           
           String bocornya = null;
           if(ini_bocor.isSelected()){
               bocornya=ini_bocor.getText();
-              ana.setTbocor("(Tidak Sesuai)");
+              
           }else if(ini_gakbocor.isSelected()){
               bocornya=ini_gakbocor.getText();
-              ana.setTbocor("(Sesuai)");
+              
           }
           
           String rusaknya = null;
           if(ada_rusak.isSelected()){
               rusaknya=ada_rusak.getText();
-              ana.setTrusak("(Tidak Sesuai)");
+              
           }else if(gak_ada_rusak.isSelected()){
               rusaknya=gak_ada_rusak.getText();
-              ana.setTrusak("(Sesuai)");
+              
           }
           
           String ausnya = null;
           if(sudah_aus.isSelected()){
               ausnya=sudah_aus.getText();
-              ana.setTaus("(Tidak Sesuai)");
+              
           }else if(durung_aus.isSelected()){
               ausnya=durung_aus.getText();
-              ana.setTaus("(Sesuai)");
+              
           }
           
           String kokohnya = null;
           if(kokoh_1.isSelected()){
               kokohnya=kokoh_1.getText();
-              ana.setKokoh("(Sesuai)");
+              
           }else if(kokoh_2.isSelected()){
               kokohnya=kokoh_2.getText();
-              ana.setKokoh("(Tidak Sesuai)");
+              
           }
           
           String kuncinya = null;
           if(kunciada.isSelected()){
               kuncinya=kunciada.getText();
-              ana.setKunci("(Sesuai)");
+              
           }else if(kunchilang.isSelected()){
             kuncinya=kunchilang.getText();
-            ana.setKunci("(Tidak Sesuai)");
+            
           }
           
           String amannya;
           if(RD_aman.isSelected()){
               amannya=RD_aman.getText();
-              ana.setAman("(Sesuai)");
+              
           }else if(tidak.isSelected()){
               amannya=tidak.getText();
-              ana.setAman("(Tidak Sesuai)");
+              
           }
           
           
