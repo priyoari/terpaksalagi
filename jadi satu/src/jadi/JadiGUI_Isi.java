@@ -1280,7 +1280,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           
           
           String cahaya=input_nilai_cahaya.getText();
-          String sirkulasi=inputudara.getText().toLowerCase();
+          String sirkulasi=input_nilai_cahaya.getText();
           String lembab=input_lembab.getText();
           String suhu=input_suh.getText();
           String bisingnya = null;
