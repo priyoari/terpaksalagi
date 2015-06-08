@@ -133,7 +133,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-// coba comen
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
