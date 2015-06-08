@@ -1233,6 +1233,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
           kenalan lan=new kenalan();
+          Analisis ana = new Analisis();
                     
           lan.setNamaRuang(inputnama_ruang.getText());
           lan.setProgramStudi(input_jurusan.getText());
@@ -1240,10 +1241,10 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
          // String k_lantai;
           if(lantai_bersih.isSelected()){
                 lan.setBersihlantai(lantai_bersih.getText());
-                
+                ana.setKlantai("(Sesuai)");
           }else if(lantai_kotor.isSelected()){
                 lan.setBersihlantai(lantai_kotor.getText());
-                
+                ana.setKlantai("(Tidak Sesuai)");
           }
           
           if(dinding_bersih.isSelected()){
