@@ -1280,17 +1280,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           } 
           
           String sirkulasi=inputudara.getText();
-          if(inputudara.equals("lancar")){
-              ana.setUdara("(Sesuai)");
-          }else{
-              ana.setUdara("(Tidak Sesuai)");
-          }
           String cahaya=input_nilai_cahaya.getText();
-          if(Integer.parseInt(input_nilai_cahaya.getText())>=250&&Integer.parseInt(input_nilai_cahaya.getText())<=350){
-              ana.setCahaya("(Sesuai)");
-          }else{
-              ana.setCahaya("(Tidak Sesuai)");
-          }
           String lembab=input_lembab.getText();
           String suhu=input_suh.getText();
           String bisingnya = null;
@@ -1304,64 +1294,64 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
           String baunya = null;
           if(ini_bau.isSelected()){
               baunya=ini_bau.getText();
-              
+              ana.setTbau("(Tidak Sesuai)");
           }else if(ini_gakbau.isSelected()){
                 baunya=ini_gakbau.getText();
-                
+                ana.setTbau("(Sesuai)");
           }
           
           String bocornya = null;
           if(ini_bocor.isSelected()){
               bocornya=ini_bocor.getText();
-              
+              ana.setTbocor("(Tidak Sesuai)");
           }else if(ini_gakbocor.isSelected()){
               bocornya=ini_gakbocor.getText();
-              
+              ana.setTbocor("(Sesuai)");
           }
           
           String rusaknya = null;
           if(ada_rusak.isSelected()){
               rusaknya=ada_rusak.getText();
-              
+              ana.setTrusak("(Tidak Sesuai)");
           }else if(gak_ada_rusak.isSelected()){
               rusaknya=gak_ada_rusak.getText();
-              
+              ana.setTrusak("(Sesuai)");
           }
           
           String ausnya = null;
           if(sudah_aus.isSelected()){
               ausnya=sudah_aus.getText();
-              
+              ana.setTaus("(Tidak Sesuai)");
           }else if(durung_aus.isSelected()){
               ausnya=durung_aus.getText();
-              
+              ana.setTaus("(Sesuai)");
           }
           
           String kokohnya = null;
           if(kokoh_1.isSelected()){
               kokohnya=kokoh_1.getText();
-              
+              ana.setKokoh("(Sesuai)");
           }else if(kokoh_2.isSelected()){
               kokohnya=kokoh_2.getText();
-              
+              ana.setKokoh("(Tidak Sesuai)");
           }
           
           String kuncinya = null;
           if(kunciada.isSelected()){
               kuncinya=kunciada.getText();
-              
+              ana.setKunci("(Sesuai)");
           }else if(kunchilang.isSelected()){
             kuncinya=kunchilang.getText();
-            
+            ana.setKunci("(Tidak Sesuai)");
           }
           
           String amannya;
           if(RD_aman.isSelected()){
               amannya=RD_aman.getText();
-              
+            ana.setAman("(Sesuai)");  
           }else if(tidak.isSelected()){
               amannya=tidak.getText();
-              
+            ana.setAman("(Tidak Sesuai)");  
           }
           
           
