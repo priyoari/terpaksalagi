@@ -187,9 +187,10 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         j_pintu = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        input_kontak = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox();
         RD_kontak1 = new javax.swing.JRadioButton();
@@ -201,15 +202,15 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        j_lcd = new javax.swing.JTextField();
+        J_lampu = new javax.swing.JTextField();
+        j_kipas = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        j_ac = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
+        j_cctv = new javax.swing.JTextField();
+        bandwidth = new javax.swing.JTextField();
         RD_LCD1 = new javax.swing.JRadioButton();
         RD_LCD2 = new javax.swing.JRadioButton();
         RD_lampu2 = new javax.swing.JRadioButton();
@@ -231,6 +232,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
         jComboBox10 = new javax.swing.JComboBox();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
@@ -411,6 +413,13 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
             }
         });
 
+        jButton2.setText("Update");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -419,7 +428,9 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 234, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton8))
@@ -472,7 +483,8 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
-                    .addComponent(jButton7))
+                    .addComponent(jButton7)
+                    .addComponent(jButton2))
                 .addContainerGap())
         );
 
@@ -480,9 +492,9 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         jLabel5.setText("Stop Kontak");
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        input_kontak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                input_kontakActionPerformed(evt);
             }
         });
 
@@ -585,6 +597,13 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
         jLabel15.setText("Apakah Bisa Login?");
 
+        jButton4.setText("Update");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -607,7 +626,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                                 .addGap(23, 23, 23)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(bandwidth, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(27, 27, 27)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel15)
@@ -615,7 +634,10 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                                         .addComponent(RD_Login1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(RD_Login2))))
-                            .addComponent(jLabel28))
+                            .addComponent(jLabel28)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jButton4)
+                                .addGap(54, 54, 54)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -633,12 +655,12 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                                             .addComponent(jLabel29))
                                         .addGap(28, 28, 28)
                                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(j_lcd, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(input_kontak, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(J_lampu, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(j_kipas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(j_ac, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(j_cctv, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addGap(34, 34, 34)
@@ -699,39 +721,39 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                             .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RD_LCD2)
                             .addComponent(RD_LCD1)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_lcd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RD_lampu2)
                             .addComponent(RD_lampu1)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(J_lampu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RD_kipas2)
                             .addComponent(RD_kipas1)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_kipas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel25))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RD_AC2)
                             .addComponent(RD_AC1)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_ac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel22))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(RD_CCTV2)
                             .addComponent(RD_CCTV1)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(j_cctv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel29)))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(input_kontak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(RD_kontak1)
                         .addComponent(RD_kontak2)))
                 .addGap(18, 18, 18)
@@ -744,14 +766,15 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
                         .addComponent(jLabel15)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bandwidth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RD_Login1)
                     .addComponent(RD_Login2)
                     .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
-                    .addComponent(jButton5))
+                    .addComponent(jButton5)
+                    .addComponent(jButton4))
                 .addContainerGap())
         );
 
@@ -1220,7 +1243,108 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
            // isi();
+        kenalan lan=new kenalan();
+        lan.setNamaRuang(inputnama_ruang.getText());
+        String kontak=input_kontak.getText();
+        String lcd=j_lcd.getText();
+        String lampu=J_lampu.getText();
+        String kipas=j_kipas.getText();
+        String ac=j_ac.getText();
+        String cctv=j_cctv.getText();
         
+        String sid=(String)jComboBox10.getSelectedItem().toString();
+        
+        String kontakya=null;
+        if(RD_kontak1.isSelected()){
+            kontakya=RD_kontak1.getText();
+        }else if(RD_kontak2.isSelected()){
+            kontakya=RD_kontak2.getText();
+        }
+        
+        String lcdnya=null;
+        if(RD_LCD1.isSelected()){
+            lcdnya=RD_LCD1.getText();
+        }else if(RD_LCD2.isSelected()){
+            lcdnya=RD_LCD2.getText();
+        }
+        
+        String lampunya=null;
+        if(RD_lampu1.isSelected()){
+            lampunya=RD_lampu1.getText();
+        }else if(RD_lampu2.isSelected()){
+            lampunya=RD_lampu2.getText();
+        }
+        
+        String kipasnya=null;
+        if(RD_kipas1.isSelected()){
+            kipasnya=RD_kipas1.getText();
+        }else if(RD_kipas2.isSelected()){
+            kipasnya=RD_kipas2.getText();
+        }
+        
+        String acnya=null;
+        if(RD_AC1.isSelected()){
+            acnya=RD_AC1.getText();
+        }else if(RD_AC2.isSelected()){
+            acnya=RD_AC2.getText();
+        }
+        
+        String cctvnya=null;
+        if(RD_CCTV1.isSelected()){
+            cctvnya=RD_CCTV1.getText();
+        }else if(RD_CCTV2.isSelected()){
+            cctvnya=RD_CCTV2.getText();
+        }
+        
+      String bandwit=bandwidth.getText();
+      
+      String pkontak=jComboBox4.getSelectedItem().toString();
+      String plcd=jComboBox5.getSelectedItem().toString();
+      String plampu=jComboBox6.getSelectedItem().toString();
+      String pkipas=jComboBox7.getSelectedItem().toString();
+      String pac=jComboBox8.getSelectedItem().toString();
+      String pcct=jComboBox9.getSelectedItem().toString();
+      
+      String login_wifinya=null;
+      if(RD_Login1.isSelected()){
+          login_wifinya=RD_Login1.getText();
+      }else if(RD_Login2.isSelected()){
+          login_wifinya=RD_Login2.getText();
+      }
+      
+      try{
+           Connection ct=Koneksinya_ruang.getKonksi();
+            String sql="INSERT INTO SARANA VALUES(?,?,?,?,?,?,?,?,?,?,?"
+                    + ",?,?,?,?,?,?,?,?,?,?,?)";
+            PreparedStatement pro=ct.prepareStatement(sql);
+            pro.setString(1, lan.getNamaRuang());
+            pro.setString(2, kontak);
+            pro.setString(3, lcd);
+            pro.setString(4, lampu);
+            pro.setString(5, kipas);
+            pro.setString(6, ac);
+            pro.setString(7, cctv);
+            pro.setString(8, sid);
+            pro.setString(9, kontakya);
+            pro.setString(10, lcdnya);
+            pro.setString(11, lampunya);
+            pro.setString(12, kipasnya);
+            pro.setString(13, acnya);
+            pro.setString(14, cctvnya);
+            pro.setString(15, bandwit);
+            pro.setString(16, pkontak);
+            pro.setString(17, plcd);
+            pro.setString(18, plampu);
+            pro.setString(19, pkipas);
+            pro.setString(20, pac);
+            pro.setString(21, pcct);
+            pro.setString(22, login_wifinya);
+            pro.executeUpdate();
+            pro.close();
+            JOptionPane.showMessageDialog(this, "sukse isi data");
+      }catch(SQLException qe){
+          JOptionPane.showMessageDialog(this, "ada error"+qe);
+      }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1615,9 +1739,156 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void input_kontakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_input_kontakActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_input_kontakActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         String nm_ruang=inputnama_ruang.getText();
+        String lokasi=(String)jComboBox1.getSelectedItem().toString();
+        String fakultas=jComboBox2.getSelectedItem().toString();
+        String jurusan=input_jurusan.getText();
+        String p=input_p.getText();
+        String l=input_l.getText();
+        String kursi=input_kursi.getText();
+        String pintu=j_pintu.getText();
+        String jendela=j_jendela.getText();
+        
+         try{
+             Connection c=Koneksinya_ruang.getKonksi();
+             String sql="UPDATE IDENTITAS SET LOKASI=?,FAKULTAS=?,JURUSAN=?,"
+                     + "PANJANG=?,LEBAR=?,JUMLAH_KURSI=?,JUMLAH_PINTU=?,JUMLAH_JENDELA=? WHERE NAMA_RUANG=?";
+             PreparedStatement pre=c.prepareStatement(sql);
+             
+             pre.setString(1, lokasi);
+             pre.setString(2, fakultas);
+             pre.setString(3, jurusan);
+             pre.setString(4, p);
+             pre.setString(5, l);
+             pre.setString(6, kursi);
+             pre.setString(7, pintu);
+             pre.setString(8, jendela);
+             pre.setString(9, nm_ruang);
+             pre.executeUpdate();
+             pre.close();
+             JOptionPane.showMessageDialog(this, "data di save");
+         }catch(SQLException e){
+             System.out.println("");
+            JOptionPane.showMessageDialog(this, "ada yang error saat isi data"+"/n"+e);
+         }    
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        kenalan lan=new kenalan();
+        lan.setNamaRuang(inputnama_ruang.getText());
+        String kontak=input_kontak.getText();
+        String lcd=j_lcd.getText();
+        String lampu=J_lampu.getText();
+        String kipas=j_kipas.getText();
+        String ac=j_ac.getText();
+        String cctv=j_cctv.getText();
+        
+        String sid=(String)jComboBox10.getSelectedItem().toString();
+        
+        String kontakya=null;
+        if(RD_kontak1.isSelected()){
+            kontakya=RD_kontak1.getText();
+        }else if(RD_kontak2.isSelected()){
+            kontakya=RD_kontak2.getText();
+        }
+        
+        String lcdnya=null;
+        if(RD_LCD1.isSelected()){
+            lcdnya=RD_LCD1.getText();
+        }else if(RD_LCD2.isSelected()){
+            lcdnya=RD_LCD2.getText();
+        }
+        
+        String lampunya=null;
+        if(RD_lampu1.isSelected()){
+            lampunya=RD_lampu1.getText();
+        }else if(RD_lampu2.isSelected()){
+            lampunya=RD_lampu2.getText();
+        }
+        
+        String kipasnya=null;
+        if(RD_kipas1.isSelected()){
+            kipasnya=RD_kipas1.getText();
+        }else if(RD_kipas2.isSelected()){
+            kipasnya=RD_kipas2.getText();
+        }
+        
+        String acnya=null;
+        if(RD_AC1.isSelected()){
+            acnya=RD_AC1.getText();
+        }else if(RD_AC2.isSelected()){
+            acnya=RD_AC2.getText();
+        }
+        
+        String cctvnya=null;
+        if(RD_CCTV1.isSelected()){
+            cctvnya=RD_CCTV1.getText();
+        }else if(RD_CCTV2.isSelected()){
+            cctvnya=RD_CCTV2.getText();
+        }
+        
+      String bandwit=bandwidth.getText();
+      
+      String pkontak=jComboBox4.getSelectedItem().toString();
+      String plcd=jComboBox5.getSelectedItem().toString();
+      String plampu=jComboBox6.getSelectedItem().toString();
+      String pkipas=jComboBox7.getSelectedItem().toString();
+      String pac=jComboBox8.getSelectedItem().toString();
+      String pcct=jComboBox9.getSelectedItem().toString();
+      
+      String login_wifinya=null;
+      if(RD_Login1.isSelected()){
+          login_wifinya=RD_Login1.getText();
+      }else if(RD_Login2.isSelected()){
+          login_wifinya=RD_Login2.getText();
+      }
+      
+      try{
+           Connection ct=Koneksinya_ruang.getKonksi();
+            String sql="UPDATE SARANA SET JUMLAH_STOP_KONTAK=?,JUMBLAH_KABEL_LCD=?,JUMLAH_LAMPU=?,"
+                    + "JUMLAH_KIPAS=?,JUMLAH_AC=?,JUMLAH_CCTV=?,SSID=?,"
+                    + "KONDISI_KONTAK=?,KONDISI_LCD=?,KONDISI_LAMPU=?,KONDISI_KIPAS=?,"
+                    + "KONDISI_AC=?,KONDISI_CCTV=?,BANWIDTH=?,POSISI_KONTAK=?,"
+                    + "POSISI_LCD=?,POSISI_LAMPU=?,POSISI_KIPAS=?,POSISI_AC=?,"
+                    + "POSISI_CCTV=?,APA_LOGIN=? WHERE NAMA_RUANG=?";
+            PreparedStatement pro=ct.prepareStatement(sql);
+            
+            pro.setString(1, kontak);
+            pro.setString(2, lcd);
+            pro.setString(3, lampu);
+            pro.setString(4, kipas);
+            pro.setString(5, ac);
+            pro.setString(6, cctv);
+            pro.setString(7, sid);
+            pro.setString(8, kontakya);
+            pro.setString(9, lcdnya);
+            pro.setString(10, lampunya);
+            pro.setString(11, kipasnya);
+            pro.setString(12, acnya);
+            pro.setString(13, cctvnya);
+            pro.setString(14, bandwit);
+            pro.setString(15, pkontak);
+            pro.setString(16, plcd);
+            pro.setString(17, plampu);
+            pro.setString(18, pkipas);
+            pro.setString(19, pac);
+            pro.setString(20, pcct);
+            pro.setString(21, login_wifinya);
+            pro.setString(22, lan.getNamaRuang());
+            pro.executeUpdate();
+            pro.close();
+            JOptionPane.showMessageDialog(this, "sukse isi data");
+      }catch(SQLException qe){
+          JOptionPane.showMessageDialog(this, "ada error"+qe);
+      }
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1658,6 +1929,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField J_lampu;
     private javax.swing.JRadioButton RD_AC1;
     private javax.swing.JRadioButton RD_AC2;
     private javax.swing.JRadioButton RD_CCTV1;
@@ -1676,6 +1948,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JRadioButton ada_rusak;
     private javax.swing.JRadioButton atap_bersih;
     private javax.swing.JRadioButton atap_kotor;
+    private javax.swing.JTextField bandwidth;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -1690,6 +1963,7 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JRadioButton ini_gakbising;
     private javax.swing.JRadioButton ini_gakbocor;
     private javax.swing.JTextField input_jurusan;
+    private javax.swing.JTextField input_kontak;
     private javax.swing.JTextField input_kursi;
     private javax.swing.JTextField input_l;
     private javax.swing.JTextField input_lembab;
@@ -1704,7 +1978,9 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -1769,14 +2045,11 @@ public class JadiGUI_Isi extends javax.swing.JFrame{
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField j_ac;
+    private javax.swing.JTextField j_cctv;
     private javax.swing.JTextField j_jendela;
+    private javax.swing.JTextField j_kipas;
+    private javax.swing.JTextField j_lcd;
     private javax.swing.JTextField j_pintu;
     private javax.swing.JRadioButton jendela_bersih;
     private javax.swing.JRadioButton jendela_kotor;

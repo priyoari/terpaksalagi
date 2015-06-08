@@ -7,6 +7,7 @@ package jadi;
  */
 import java.io.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class JadiGUI_LihatEdit extends javax.swing.JFrame {
 
     /** Creates new form JadiGUI2 */
-    private DefaultTableModel model,identitas_model;
+    private DefaultTableModel model,identitas_model,sarana;
     public JadiGUI_LihatEdit() throws SQLException {
         initComponents();
         this.setLocationRelativeTo(this);
@@ -58,6 +59,33 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         
         baca_identitas();
         
+        sarana=new DefaultTableModel();
+        tablesaran.setModel(sarana);
+        sarana.addColumn("nama_ruang");
+        sarana.addColumn("stop kontak");
+        sarana.addColumn("kabel_lcd");
+        sarana.addColumn("jumlah_lampu");
+        sarana.addColumn("jumlah_kipas");
+        sarana.addColumn("jumlah_ac");
+        sarana.addColumn("jumlah_cctv");
+        sarana.addColumn("ssid");
+        sarana.addColumn("konsisi_kontak");
+        sarana.addColumn("kondisi_lcd");
+        sarana.addColumn("kondisi_lampu");
+        sarana.addColumn("kondisi_kipas");
+        sarana.addColumn("kondisi_ac");
+        sarana.addColumn("kondisi_cctv");
+        sarana.addColumn("bandwidth");
+        sarana.addColumn("posisi_kontak");
+        sarana.addColumn("posisi_lcd");
+        sarana.addColumn("posisi_lampu");
+        sarana.addColumn("posisi_kipas");
+        sarana.addColumn("posisi_ac");
+        sarana.addColumn("posisi_cctv");
+        sarana.addColumn("status");
+        
+        baca_sarana();
+        
     }
 
     /** This method is called from within the constructor to
@@ -76,10 +104,18 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_identitas = new javax.swing.JTable();
+        hapus_identitas = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        hapus_lingkungan = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablesaran = new javax.swing.JTable();
+        hapus_sarana = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -102,6 +138,13 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(table_identitas);
 
+        jButton1.setText("hapus identitas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -113,7 +156,11 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(45, 45, 45)
                         .addComponent(jLabel2))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(hapus_identitas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton1)))
                 .addContainerGap(378, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -124,11 +171,15 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hapus_identitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("GKB 1", jPanel2);
+        jTabbedPane1.addTab("Tampil Identitas", jPanel2);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -143,37 +194,88 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTable1);
 
+        jButton2.setText("Hapus Lingkungan");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(hapus_lingkungan, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton2)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hapus_lingkungan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addGap(296, 296, 296))
         );
 
-        jTabbedPane1.addTab("GKB 2", jPanel3);
+        jTabbedPane1.addTab("Tampil Lingkungan", jPanel3);
+
+        tablesaran.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tablesaran);
+
+        jButton3.setText("Hapus Sarana");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(hapus_sarana, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(jButton3)))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hapus_sarana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3))
+                .addGap(0, 250, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("GKB 3", jPanel4);
+        jTabbedPane1.addTab("Tampil Sarana", jPanel4);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -188,7 +290,7 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addGap(40, 40, 40))
         );
 
@@ -211,6 +313,63 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String hapus=hapus_identitas.getText();
+        try{
+           Connection coon=Koneksinya_ruang.getKonksi();
+           String sql="DELETE FROM IDENTITAS WHERE NAMA_RUANG=?";
+           PreparedStatement p=coon.prepareStatement(sql);
+           
+           p.setString(1, hapus);
+           JOptionPane.showMessageDialog(this, "hapus data sukses");
+           p.executeUpdate();
+           p.close();
+           
+           
+       }catch(SQLException q){
+           JOptionPane.showMessageDialog(this, "gagal hapus data"+q);
+       }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String hapus=hapus_lingkungan.getText();
+        try{
+           Connection coon=Koneksinya_ruang.getKonksi();
+           String sql="DELETE FROM LINGKUNGAN WHERE NAMA_RUANG=?";
+           PreparedStatement p=coon.prepareStatement(sql);
+           
+           p.setString(1, hapus);
+           JOptionPane.showMessageDialog(this, "hapus data sukses");
+           p.executeUpdate();
+           p.close();
+           
+           
+       }catch(SQLException q){
+           JOptionPane.showMessageDialog(this, "gagal hapus data"+q);
+       }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String hapus=hapus_sarana.getText();
+        try{
+           Connection coon=Koneksinya_ruang.getKonksi();
+           String sql="DELETE FROM SARANA WHERE NAMA_RUANG=?";
+           PreparedStatement p=coon.prepareStatement(sql);
+           
+           p.setString(1, hapus);
+           JOptionPane.showMessageDialog(this, "hapus data sukses");
+           p.executeUpdate();
+           p.close();
+           
+           
+       }catch(SQLException q){
+           JOptionPane.showMessageDialog(this, "gagal hapus data"+q);
+       }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,6 +442,51 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "gagal load data"+q);
         }
     }
+    
+    void baca_sarana(){
+        sarana.getDataVector().removeAllElements();
+        sarana.fireTableDataChanged();
+        
+        try{
+            Connection cmt=Koneksinya_ruang.getKonksi();
+            Statement sq=cmt.createStatement();
+            
+            String sql="SELECT * FROM SARANA";
+            ResultSet rq=sq.executeQuery(sql);
+            
+            while(rq.next()){
+                Object[] b=new Object[22];
+                b[0]=rq.getString("nama_ruang");
+                b[1]=rq.getString("jumlah_stop_kontak");
+                b[2]=rq.getString("jumblah_kabel_lcd");
+                b[3]=rq.getString("jumlah_lampu");
+                b[4]=rq.getString("jumlah_kipas");
+                b[5]=rq.getString("jumlah_ac");
+                b[6]=rq.getString("jumlah_cctv");
+                b[7]=rq.getString("ssid");
+                b[8]=rq.getString("kondisi_kontak");
+                b[9]=rq.getString("kondisi_lcd");
+                b[10]=rq.getString("kondisi_lampu");
+                b[11]=rq.getString("kondisi_kipas");
+                b[12]=rq.getString("kondisi_ac");
+                b[13]=rq.getString("kondisi_cctv");
+                b[14]=rq.getString("banwidth");
+                b[15]=rq.getString("posisi_kontak");
+                b[16]=rq.getString("posisi_lcd");
+                b[17]=rq.getString("posisi_lampu");
+                b[18]=rq.getString("posisi_kipas");
+                b[19]=rq.getString("posisi_ac");
+                b[20]=rq.getString("posisi_cctv");
+                b[21]=rq.getString("apa_login");
+                sarana.addRow(b); 
+            }
+            rq.close();
+            sq.close();
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(this, "gagal tampil data"+e);
+        }
+    }
+    
     void baca() throws SQLException {
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
@@ -322,17 +526,25 @@ public class JadiGUI_LihatEdit extends javax.swing.JFrame {
     
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField hapus_identitas;
+    private javax.swing.JTextField hapus_lingkungan;
+    private javax.swing.JTextField hapus_sarana;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable table_identitas;
+    private javax.swing.JTable tablesaran;
     // End of variables declaration//GEN-END:variables
 
 }

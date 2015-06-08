@@ -27,7 +27,7 @@ public class Koneksinya_ruang {
                 koneksinya=DriverManager.getConnection(url, username, Password);
                 
             }catch(SQLException t){
-                  JOptionPane.showMessageDialog(null, "tidak bisa buat koneksi");
+                  JOptionPane.showMessageDialog(null, "tidak bisa buat koneksi"+t);
                   Logger.getLogger(Koneksinya_ruang.class.getName()).log(Level.SEVERE,null,t);
             }
         }

@@ -217,7 +217,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="311" max="32767" attributes="0"/>
+                              <EmptySpace pref="234" max="32767" attributes="0"/>
+                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButton8" min="-2" max="-2" attributes="0"/>
@@ -288,6 +290,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -346,6 +349,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Update"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
@@ -380,7 +391,7 @@
                                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jLabel14" max="32767" attributes="0"/>
-                                          <Component id="jTextField16" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="bandwidth" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -393,6 +404,10 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -414,12 +429,12 @@
                                               </Group>
                                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField11" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jTextField3" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jTextField12" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jTextField13" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jTextField14" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jTextField15" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="j_lcd" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="input_kontak" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="J_lampu" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="j_kipas" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="j_ac" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="j_cctv" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -502,7 +517,7 @@
                                   <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_LCD2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_LCD1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="j_lcd" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -510,7 +525,7 @@
                                   <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_lampu2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_lampu1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="J_lampu" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -518,7 +533,7 @@
                                   <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_kipas2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_kipas1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="j_kipas" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -526,7 +541,7 @@
                                   <Component id="jComboBox8" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_AC2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_AC1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="j_ac" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -534,13 +549,13 @@
                                   <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_CCTV2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="RD_CCTV1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="j_cctv" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="input_kontak" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="RD_kontak1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="RD_kontak2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -557,7 +572,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bandwidth" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RD_Login1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RD_Login2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jComboBox10" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -566,6 +581,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -578,9 +594,9 @@
                 <Property name="text" type="java.lang.String" value="Stop Kontak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="input_kontak">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="input_kontakActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -665,11 +681,11 @@
                 <Property name="text" type="java.lang.String" value="Kondisi Sarana"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField11">
+            <Component class="javax.swing.JTextField" name="j_lcd">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField12">
+            <Component class="javax.swing.JTextField" name="J_lampu">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField13">
+            <Component class="javax.swing.JTextField" name="j_kipas">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel28">
               <Properties>
@@ -679,7 +695,7 @@
                 <Property name="text" type="java.lang.String" value="Internet"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField14">
+            <Component class="javax.swing.JTextField" name="j_ac">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel22">
               <Properties>
@@ -691,9 +707,9 @@
                 <Property name="text" type="java.lang.String" value="CCTV"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField15">
+            <Component class="javax.swing.JTextField" name="j_cctv">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField16">
+            <Component class="javax.swing.JTextField" name="bandwidth">
             </Component>
             <Component class="javax.swing.JRadioButton" name="RD_LCD1">
               <Properties>
@@ -832,6 +848,14 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Apakah Bisa Login?"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Update"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
